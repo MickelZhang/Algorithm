@@ -1,0 +1,8 @@
+Task for SeventeenChen and MickelZhang.
+
+day：
+1.10天复习C++基本知识
+2.数据结构和算法
+3.算法题一道（leetcode）
+
+
