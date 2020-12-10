@@ -20,3 +20,9 @@ http://www.woyouxian.net/z/c++/toc.html
 https://www.geeksforgeeks.org/writing-first-c-program-hello-world-example/   详细
 
 
+cin  
+cout
+getline() 此函数可读取整行，包括前导和嵌入的空格，并将其存储在字符串对象中。
+
+
+
