@@ -6,3 +6,17 @@ day：
 3.算法题一道（leetcode）
 
 
+在线网站和在线程序运行：
+http://cpp.sh/   代码运行
+https://www.w3schools.com/cpp/   在线查看
+https://www.w3schools.com/cpp/trycpp.asp?filename=demo_helloworld  网上可以运行    
+https://www.learncpp.com/cpp-tutorial/introduction-to-these-tutorials/   
+
+http://www.shouce.ren/api/index  
+http://www.shouce.ren/api/view/a/5429 
+
+http://www.woyouxian.net/z/c++/toc.html 
+
+https://www.geeksforgeeks.org/writing-first-c-program-hello-world-example/   详细
+
+
