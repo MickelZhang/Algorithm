@@ -1,10 +1,10 @@
+.gitignore
 C++/Test/demo.VC.db
 C++/Test/demo.sln
+C++/Test/.vs
 C++/Test/demo.VC.db
-C++/Test/demo.VC.VC.opendb
-C++/Test/x64
 C++/Test/demo/demo.vcxproj
 C++/Test/demo/demo.vcxproj.filters
 C++/Test/demo/x64
-C++/Test/.vs
-Book
+C++/Test/x64
+
