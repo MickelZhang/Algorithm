@@ -1,31 +1,35 @@
+Time : 2020/12/11
 Task for SeventeenChen and MickelZhang.
 
-day：
-1.10天复习C++基本知识
-2.数据结构和算法
-3.算法题一道（leetcode）
+前期：
 
-编程环境：
+C++基础知识，参考教程：菜鸟教程，参考书籍：C++Primer.
+https://www.runoob.com/cplusplus/cpp-tutorial.html  （菜鸟教程链接）
+
+中期：
+数据结构和算法，参考教程：王争数据结构和算法，参考书籍：大话数据结构+算法图解
+https://github.com/wangzheng0822/algo  （王争github链接）
+
+后期：
+LeetCode算法题，按类型刷题，每一类型15道，先易后难，一轮过后,LeetCode+剑指offer.
+https://www.acwing.com/activity/content/5/  （Acwing 剑指offer）
+
+开发环境：
+没有指定要求，windows下主要以VS为主.
+
+代码效率：
+程序执行效率+程序安全性问题 参考书籍：Effective C++.
+
+代码规范：
+参考教程：Google C++ 代码规范.
+https://zh-google-styleguide.readthedocs.io/en/latest/google-cpp-styleguide/contents/  
+
+时间安排：
+
+目标：
+秋招 for SeventeenChen.
 
 
-
-在线网站和在线程序运行：
-http://cpp.sh/   代码运行
-https://www.w3schools.com/cpp/   在线查看
-https://www.w3schools.com/cpp/trycpp.asp?filename=demo_helloworld  网上可以运行    
-https://www.learncpp.com/cpp-tutorial/introduction-to-these-tutorials/   
-
-http://www.shouce.ren/api/index  
-http://www.shouce.ren/api/view/a/5429 
-
-http://www.woyouxian.net/z/c++/toc.html 
-
-https://www.geeksforgeeks.org/writing-first-c-program-hello-world-example/   详细
-
-
-cin  
-cout
-getline() 此函数可读取整行，包括前导和嵌入的空格，并将其存储在字符串对象中。
 
 
 
