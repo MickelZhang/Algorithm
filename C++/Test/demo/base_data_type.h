@@ -2,7 +2,7 @@
 // Copyright (C) MickelZhang
 // License:MIT
 // 文件名：base_data_type.h
-// 文件功能描述：
+// 文件功能描述：编写.h 头文件，提供给其他文件调用
 // 创建者：MickelZhang
 // 时间：2020/12/14
 // 修改人：
@@ -14,5 +14,5 @@
 
 void BaseDataType();
 
-#endif // !BA
+#endif 
 

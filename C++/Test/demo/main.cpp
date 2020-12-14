@@ -7,7 +7,7 @@
 // 时间：2020/12/11
 // 修改人：MickelZhang
 // 时间：2020/12/14
-// 修改说明：添加基本数据类型相关的代码
+// 修改说明：添加基本数据类型相关的代码，测试static
 // 软件版本：VS2015
 //----------------------------------------------------------------*/
 #include <iostream>
@@ -15,13 +15,16 @@
 #include "base_data_type.h"
 
 using namespace std;  // 命名空间
-int g;  // 全局变量，整个生命周期都是有效的，全局变量会默认给定初始化的值
 
+// 测试static相关的功能
+void TestForStatic(void);
+
+int g;  // 全局变量，整个生命周期都是有效的，全局变量会默认给定初始化的值
 // 常量定义的两种方法,常量一般为全部大写的方式
 #define LENGHT 10
 #define WIDTH 5
 const int AREA = 50;
-
+static int count_number = 10; /* 全局变量 */
 
 // 主函数
 int main()
@@ -32,5 +35,30 @@ int main()
 
 	int a;  // 局部变量，定义后系统不会初始化，需要人为初始化数值
 
+	while (count_number--)
+	{
+		TestForStatic();
+	}
+
 	return 0;
+}
+
+/*-----------------------------------------------------------------
+// 输入：void
+// 输出：
+// 功能描述：测试static的相关功能
+// 作者：MickelZhang
+// 日期：2020/12/14
+// 修改人：
+// 记录：
+// 修改人：
+// 记录：
+// 版本：
+-----------------------------------------------------------------*/
+void TestForStatic(void)
+{
+	static int i = 5; // 局部静态变量
+	i++;
+	std::cout << "变量 i 为 " << i;
+	std::cout << " , 变量 count 为 " << count_number << std::endl;
 }
