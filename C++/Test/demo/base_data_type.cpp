@@ -2,7 +2,7 @@
 // Copyright (C) MickelZhang
 // License:MIT
 // 文件名：base_data_type.cpp
-// 文件功能描述：
+// 文件功能描述：基本数据类型
 // 创建者：MickelZhang
 // 时间：2020/12/14
 // 修改人：
@@ -17,6 +17,16 @@
 using namespace std;  // 命名空间
 
 typedef int renameint;  //起别名
+
+
+// 在主函数所在文件中使用的需要添加 extern 有相关测试代码
+extern int countnum;
+void write_extern(void)
+{
+	std::cout << "countnum is " << countnum << std::endl;
+}
+
+
 
 /*-----------------------------------------------------------------
 // 输入：

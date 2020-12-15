@@ -12,6 +12,7 @@
 //----------------------------------------------------------------*/
 #include <iostream>
 #include <limits>
+#include<string>
 #include "base_data_type.h"
 
 using namespace std;  // 命名空间
@@ -26,19 +27,34 @@ int g;  // 全局变量，整个生命周期都是有效的，全局变量会默认给定初始化的值
 const int AREA = 50;
 static int count_number = 10; /* 全局变量 */
 
+// test for extern
+int countnum;
+extern void write_extern();
+
 // 主函数
 int main()
 {
 	cout << "hello,world\n";
-	cout << "hello,Mickel" << endl;  //endl和\n结果一样 2020/12/14
-	BaseDataType();  // 数据类型所占空间大小
+	std::cout << "hello,Mickel" << std::endl;  //endl和\n结果一样 2020/12/14
+	//BaseDataType();  // 数据类型所占空间大小
+	string str = "hello";
+	cout << str << endl;
+	int a = 0;
+	cout << "a:"<<a << endl;
+	cout << "g:" << g << endl;
 
-	int a;  // 局部变量，定义后系统不会初始化，需要人为初始化数值
+	//int a;  // 局部变量，定义后系统不会初始化，需要人为初始化数值，否则报错
 
-	while (count_number--)
-	{
-		TestForStatic();
-	}
+
+	// 测试static的代码段
+	//while (count_number--)
+	//{
+	//	TestForStatic();
+	//}
+
+	//test for extern
+	//countnum= 5;
+	//write_extern();
 
 	return 0;
 }
