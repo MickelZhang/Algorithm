@@ -43,7 +43,7 @@ int main()
 // 功能描述：求两个整数的和
 // 作者：MickelZhang
 // 日期：2020/12/12
-// 修改人：MickelZhang 2020/12/12
+// 修改人：MickelZhang 2020/12/12  （注：修改人这一行添加上修改人姓名+修改时间）
 // 记录：
 // 修改人：
 // 记录：
@@ -80,3 +80,5 @@ private:
 // TODO(1223256867@qq.com)
 // TODO(MickelZhang)
 // TODO(写上为什么要加TODO注释，有些待处理，或者暂时没有完成的一些功能等，描述清楚即可)
+
+// 相关测试函数均以 TestForxxxxxx  开头

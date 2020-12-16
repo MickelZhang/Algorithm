@@ -10,7 +10,8 @@
 // 修改说明：添加一些使用案例，code和说明
 // 软件版本：VS2015
 //----------------------------------------------------------------*/
-
+#include <iostream>
+using namespace std;
 //运算符
 /*
 算数运算符  +  -  *  /  %  ++  -- 
@@ -218,11 +219,11 @@ switch：
 // 记录：
 // 版本：
 -----------------------------------------------------------------*/
-void SelfIncreaseForTest()
+void TestForSelfIncrease()
 {
 	int a = 21;
 	int c;
-	   // a 的值在赋值之前不会自增
+		// a 的值在赋值之前不会自增
 	c = a++;   
 	cout << "Line 1 - Value of a++ is :" << c << endl ;
 
@@ -248,14 +249,15 @@ void SelfIncreaseForTest()
 -----------------------------------------------------------------*/
 void FindPrimeNumber()
 {
-    for(i=2; i<100; i++) {
-        for(j=2; j <= (i/j); j++) {
-            if(!(i%j)) {
-                break; // 如果找到，则不是质数
-            }
-        }
-        if(j > (i/j)) {
-            cout << i << " 是质数\n";
-        }
-    }
+	int i, j;
+	for(i=2; i<100; i++) {
+		for(j=2; j <= (i/j); j++) {
+			if(!(i%j)) {
+				break; // 如果找到，则不是质数
+			}
+		}
+		if(j > (i/j)) {
+			cout << i << " 是质数\n";
+		}
+	}
 }

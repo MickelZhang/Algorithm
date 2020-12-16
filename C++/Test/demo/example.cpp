@@ -29,26 +29,26 @@ using namespace std;
 -----------------------------------------------------------------*/
 int TheMonkeyEatPeach1(int n)
 {
-  if (n>10)
-  {
-    return 1;
-  }
-  else
-  {
-    return (TheMonkeyEatPeach1(n+1)+1)*2;
-  }
+	if (n>10)
+	{
+	return 1;
+	}
+	else
+	{
+	return (TheMonkeyEatPeach1(n+1)+1)*2;
+	}
 }
 
 // for循环思想
 int TheMonkeyEatPeach2()
 {
-  int i,s=1;
-  // 一共吃了9天
-  for(i=0; i<9;i++) 
-  {
-   s = (s+1)*2 // 倒序计算每天的数量
-  }
-  return s;
+	int i,s=1;
+	// 一共吃了9天
+	for(i=0; i<9;i++) 
+	{
+		s = (s + 1) * 2; // 倒序计算每天的数量
+	}
+	return s;
 }
 
 // for TheMonkeyEatPeach1 test:
@@ -74,27 +74,27 @@ for (i = 1; i <= 10; i++)
 -----------------------------------------------------------------*/
 int IsOddNumber1(int number)
 {
-  if (number&1)
-  {
-    return 1;
-  }
-  else
-  {
-    return 0;
-  }
+	if (number&1)
+	{
+	return 1;
+	}
+	else
+	{
+	return 0;
+	}
 }
 
 // 推荐采用bool类型做为返回值
 bool IsOddNumber2(int number)
 {
-  if (number&1)
-  {
-    return true;
-  }
-  else
-  {
-    return false;
-  }
+	if (number&1)
+	{
+	return true;
+	}
+	else
+	{
+	return false;
+	}
 }
 
 /*-----------------------------------------------------------------
@@ -111,14 +111,14 @@ bool IsOddNumber2(int number)
 -----------------------------------------------------------------*/
 int Factorial(int number)
 {
-  if(number==1)
-  {
-    return 1;
-  }
-  else
-  {
-    return Factorial(number-1)*number;
-  }
+	if(number==1)
+	{
+	return 1;
+	}
+	else
+	{
+	return Factorial(number-1)*number;
+	}
 }
 
 /*-----------------------------------------------------------------
@@ -139,21 +139,21 @@ int GetMaxNumberOfFactor1(int x, int y)
   1.先判断两个数的大小，如果两数相等，则这个数本身就 是就是它的最大公约数。
   2.如果不相等，则用大数减去小数，然后用这个较小数与它们相减的结果相比较，如果相等，则这个差就是它们的最大公约数，而如果不相等，则继续执行2操作。
 */
-  while(1)
-  {
-    if(x > y)
-    {
-      x -= y;
-    }
-    else if(x < y)
-    {
-      y -= x; 
-    }
-    else
-    {
-    return x;
-    }
-  }
+	while(1)
+	{
+		if(x > y)
+		{
+			x -= y;
+		}
+		else if(x < y)
+		{
+			y -= x; 
+		}
+		else
+		{
+			return x;
+		}
+	}
 }
 
 int GetMaxNumberOfFactor2(int x, int y)
@@ -163,21 +163,21 @@ int GetMaxNumberOfFactor2(int x, int y)
 2.当两个数不相等时，用较大数除以较小数，当余数不为0时，这时
   使较小数作为被除数，余数作为除数，继续2的操作，直至余数为0,也就是这两个数相等时，其中任一数为最大公约数
 */
-  while(x * y)  // while条件用的好
-  {
-    if(x > y)
-    {
-     x %= y; 
-    }
-    else if(x < y)
-    {
-      y %= x; 
-    }
-    else
-    {
-      return x;
-    }
-  }
+	while(x * y)  // while条件用的好
+	{
+		if(x > y)
+		{
+			x %= y; 
+		}
+		else if(x < y)
+		{
+			y %= x; 
+		}
+		else
+		{
+			return x;
+		}
+	}
 }
 
 /*-----------------------------------------------------------------
@@ -194,5 +194,5 @@ int GetMaxNumberOfFactor2(int x, int y)
 -----------------------------------------------------------------*/
 int GetMinNumberOfCommonMultiple(int x, int y)
 {
-  return x*y/GetMaxNumberOfFactor2(x,y);  // 在最大公因数的基础上进行下一步操作
+	return x*y/GetMaxNumberOfFactor2(x,y);  // 在最大公因数的基础上进行下一步操作
 }
