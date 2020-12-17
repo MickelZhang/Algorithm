@@ -11,12 +11,19 @@
 // 修改人：MickelZhang
 // 时间：2020/12/15
 // 修改说明：对2020/12/14进行相关修改
+// 修改人：MickelZhang
+// 时间：2020/12/17
+// 修改说明：实现对相关cpp文件的调用
 // 软件版本：VS2015
 //----------------------------------------------------------------*/
 #include <iostream>
 #include <limits>
-#include<string>
+#include <string>
 #include "base_data_type.h"
+#include "function.h"
+#include "data_type.h"
+#include "operator.h"
+#include "pointer.h"
 
 using namespace std;  // 命名空间
 
@@ -37,14 +44,14 @@ extern void write_extern();
 // 主函数
 int main()
 {
-	cout << "hello,world\n";
+	//cout << "hello,world\n";
 	std::cout << "hello,Mickel" << std::endl;  //endl和\n结果一样 2020/12/14
 	//BaseDataType();  // 数据类型所占空间大小
-	string str = "hello";
-	cout << str << endl;
-	int a = 0;
-	cout << "a:"<<a << endl;
-	cout << "g:" << g << endl;
+	//string str = "hello";
+	//cout << str << endl;
+	//int a = 0;
+	//cout << "a:"<<a << endl;
+	//cout << "g:" << g << endl;
 
 	//int a;  // 局部变量，定义后系统不会初始化，需要人为初始化数值，否则报错
 
@@ -58,6 +65,44 @@ int main()
 	//test for extern
 	//countnum= 5;
 	//write_extern();
+
+	//函数传参的几种形式，from function.cpp
+	//int x, y;
+	//x = 5;
+	//y = 9;
+	//SwapOfValue(x, y);
+	//SwapOfPointer(&x, &y);
+	//SwapOfQuote(x, y);
+
+	//数据类型 from data_type.cpp
+	//RandomNumber();
+	//TestForArray();
+	//ThePointerOfArray();
+	//int balance[5] = { 1000, 2, 3, 17, 50 };
+	//double avg;
+	//GetAverage(balance, 5);
+	//GetRandom();
+	//TestForStruct();
+	//TestForStructOfFunction();
+	//TestForStructPointer();
+
+	//操作符 from operator.cpp
+	//TestForSelfIncrease();
+
+	//指针相关 from pointer.cpp
+	//TestForPoint();
+	//TestForPointerIncreaseToArray();
+	//TestForPointerCompare();
+	//TestForPointerVsArray();
+	//TestForPointerArray1();
+	//TestForPointerArray2();
+	//TestForPointToPointerOfPointer();
+	//unsigned long sec;
+	//TestForGetSeconds(&sec);
+	//int balance[5] = { 1000, 2, 3, 17, 50 };
+	//double avg;
+	//GetAverage(balance, 5);
+	//TestForSetValues();
 
 	return 0;
 }

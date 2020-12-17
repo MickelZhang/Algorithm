@@ -1,4 +1,4 @@
-/*----------------------------------------------------------------
+﻿/*----------------------------------------------------------------
 // Copyright (C) MickelZhang
 // License:MIT
 // 文件名：pointer.cpp
@@ -12,7 +12,7 @@
 //----------------------------------------------------------------*/
 #include <iostream>
 #include <ctime>
-
+#include "pointer.h"
 using namespace std;
 /*
 什么是指针：
@@ -293,24 +293,24 @@ void TestForPointerArray2()
 -----------------------------------------------------------------*/
 void TestForPointToPointerOfPointer()
 {
-    int  var;
-    int  *ptr;
-    int  **pptr;
+	int  var;
+	int  *ptr;
+	int  **pptr;
  
-    var = 3000;
+	var = 3000;
  
-    // 获取 var 的地址  ptr指向了var,所*ptr等于var
-    ptr = &var;
+	// 获取 var 的地址  ptr指向了var,所*ptr等于var
+	ptr = &var;
  
-    // 使用运算符 & 获取 ptr 的地址  *pptr 等于 ptr  然后**pptr 等于 *ptr  等于 var
-    pptr = &ptr;
+	// 使用运算符 & 获取 ptr 的地址  *pptr 等于 ptr  然后**pptr 等于 *ptr  等于 var
+	pptr = &ptr;
  
-    // 使用 pptr 获取值
-    cout << "var 值为 :" << var << endl;
-    cout << "*ptr 值为:" << *ptr << endl;
-    cout << "**pptr 值为:" << **pptr << endl;
-	cout <<"*pptr 值为："<<*pptr<<endl;
-    cout <<"ptr 值为："<<ptr<<endl;
+	// 使用 pptr 获取值
+	//cout << "var 值为 :" << var << endl;
+	//cout << "*ptr 值为:" << *ptr << endl;
+	//cout << "**pptr 值为:" << **pptr << endl;
+	//cout << "*pptr 值为：" << *pptr << endl;
+	//cout << "ptr 值为：" << ptr << endl;
 }
 
 /*-----------------------------------------------------------------
@@ -436,22 +436,22 @@ double& setValues(int i)
 
 void TestForSetValues()
 {
-	cout << "改变前的值" << endl;
-	for (int i = 0; i < 5; i++)
-	{
-		cout << "vals[" << i << "] = ";
-		cout << vals[i] << endl;
-	}
+	//cout << "改变前的值" << endl;
+	//for (int i = 0; i < 5; i++)
+	//{
+	//	cout << "vals[" << i << "] = ";
+	//	cout << vals[i] << endl;
+	//}
 
-	setValues(1) = 20.23; // 改变第 2 个元素
-	setValues(3) = 70.8;  // 改变第 4 个元素
+	//setValues(1) = 20.23; // 改变第 2 个元素
+	//setValues(3) = 70.8;  // 改变第 4 个元素
 
-	cout << "改变后的值" << endl;
-	for (int i = 0; i < 5; i++)
-	{
-		cout << "vals[" << i << "] = ";
-		cout << vals[i] << endl;
-	}
+	//cout << "改变后的值" << endl;
+	//for (int i = 0; i < 5; i++)
+	//{
+	//	cout << "vals[" << i << "] = ";
+	//	cout << vals[i] << endl;
+	//}
 }
 
 // TODO(1223256867@qq.com)

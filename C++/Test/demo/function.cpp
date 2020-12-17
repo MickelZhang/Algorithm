@@ -1,4 +1,4 @@
-/*----------------------------------------------------------------
+﻿/*----------------------------------------------------------------
 // Copyright (C) MickelZhang
 // License:MIT
 // 文件名：operator.cpp
@@ -11,6 +11,7 @@
 // 软件版本：VS2015
 //----------------------------------------------------------------*/
 #include <iostream>
+#include "function.h"
 using namespace std;
 /*
 函数由一个函数头+一个函数主体组成：
@@ -52,7 +53,7 @@ void SwapOfValue(int x, int y)
 	temp = x; /* 保存 x 的值 */
 	x = y;    /* 把 y 赋值给 x */
 	y = temp; /* 把 x 赋值给 y */
-  
+	cout << "x的值：" << x << "y的值:" << y << endl;
 	return;
 }
 
@@ -75,7 +76,7 @@ void SwapOfPointer(int *x, int *y)
 	temp = *x;    /* 保存地址 x 的值 */
 	*x = *y;        /* 把 y 赋值给 x */
 	*y = temp;    /* 把 x 赋值给 y */
-  
+	cout << "*x的值：" << *x << "*y的值:" << *y << endl;
 	return;
 }
 
@@ -98,7 +99,7 @@ void SwapOfQuote(int &x, int &y)
 	temp = x; /* 保存地址 x 的值 */
 	x = y;    /* 把 y 赋值给 x */
 	y = temp; /* 把 x 赋值给 y  */
-  
+	cout << "x的值：" << x << "y的值:" << y << endl;
 	return;
 }
 

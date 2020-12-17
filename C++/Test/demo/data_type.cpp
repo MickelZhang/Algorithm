@@ -1,4 +1,4 @@
-/*----------------------------------------------------------------
+﻿/*----------------------------------------------------------------
 // Copyright (C) MickelZhang
 // License:MIT
 // 文件名：data_type.cpp
@@ -22,8 +22,10 @@
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
-using namespace std;
 #include <iomanip>
+#include "data_type.h"
+
+using namespace std;
 using std::setw;
 
 /*-----------------------------------------------------------------
@@ -187,7 +189,7 @@ double GetAverage(int arr[], int size)
 // 记录：
 // 版本：
 -----------------------------------------------------------------*/
-int* GetRandom( )
+int* GetRandom()
 {
 	/*
 	调用方式：  
@@ -313,7 +315,7 @@ void TestForStructOfFunction()
 {
 	Books Book1;        // 定义结构体类型 Books 的变量 Book1
 	Books Book2;        // 定义结构体类型 Books 的变量 Book2
-	// Book1 详述
+						// Book1 详述
 	strcpy(Book1.title, "C++ 教程");
 	strcpy(Book1.author, "Runoob");
 	strcpy(Book1.subject, "编程语言");
@@ -330,6 +332,7 @@ void TestForStructOfFunction()
 
 	// 输出 Book2 信息
 	printBook(Book2);
+
 }
 
 
