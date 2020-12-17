@@ -12,17 +12,20 @@
 //----------------------------------------------------------------*/
 
 // 下面这种方法不好，应该舍弃；
+/*
 #ifndef BASE_DATA_TYPE_H
 
 void BaseDataType();
 
 #endif 
+*/
+
 
 // 使用此方法来进行.h文件的书写
- #ifndef BASE_DATA_TYPE_H
- #define  BASE_DATA_TYPE_H
+#ifndef BASE_DATA_TYPE_H
+#define  BASE_DATA_TYPE_H
 
 void BaseDataType();
 
- #endif
+#endif
 
