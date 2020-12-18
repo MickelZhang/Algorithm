@@ -47,11 +47,11 @@ int main()
 	//cout << "hello,world\n";
 	std::cout << "hello,Mickel" << std::endl;  //endl和\n结果一样 2020/12/14
 	//BaseDataType();  // 数据类型所占空间大小
-	//string str = "hello";
-	//cout << str << endl;
+	string str = "hello";
+	cout << str << endl;
 	//int a = 0;
 	//cout << "a:"<<a << endl;
-	//cout << "g:" << g << endl;
+	//cout << "g:" << g << endl; // 默认赋值为0
 
 	//int a;  // 局部变量，定义后系统不会初始化，需要人为初始化数值，否则报错
 
@@ -67,12 +67,13 @@ int main()
 	//write_extern();
 
 	//函数传参的几种形式，from function.cpp
-	//int x, y;
-	//x = 5;
-	//y = 9;
+	int x, y;
+	x = 5;
+	y = 9;
 	//SwapOfValue(x, y);
 	//SwapOfPointer(&x, &y);
-	//SwapOfQuote(x, y);
+	SwapOfQuote(x, y);
+	cout << x << y << endl;
 
 	//数据类型 from data_type.cpp
 	//RandomNumber();
@@ -81,13 +82,21 @@ int main()
 	//int balance[5] = { 1000, 2, 3, 17, 50 };
 	//double avg;
 	//GetAverage(balance, 5);
-	//GetRandom();
+	//cout << GetAverage(balance, 5) << endl;
+	//int *p;
+	//p = GetRandom();
+	//for (int i = 0; i < 10; i++)
+	//{
+	//	cout << "*(p + " << i << ") : ";
+	//	cout << *(p + i) << endl;
+	//}
 	//TestForStruct();
 	//TestForStructOfFunction();
 	//TestForStructPointer();
 
 	//操作符 from operator.cpp
 	//TestForSelfIncrease();
+
 
 	//指针相关 from pointer.cpp
 	//TestForPoint();

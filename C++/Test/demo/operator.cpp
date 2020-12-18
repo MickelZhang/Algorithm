@@ -22,7 +22,8 @@ using namespace std;
 位运算符   &  |  ^异或 ` <<   >>
 赋值运算符 =   +=  -=  *=    /=  %=  <<=   >>=   &=  ^=   |=    
 杂项运算符  
-	sizeof 返回变量的大小 sizeof(cahr)  是一个关键字，它是编译时候用于判断变量或者数据类型的字节大小
+	sizeof 返回变量的大小 sizeof(cahr)  是一个关键字，
+	它是编译时候用于判断变量或者数据类型的字节大小
 	condition ? X:Y 条件运算符 和if..else效果一样 var = (y < 10) ? 30 : 40;  小于10则结果是30，否则是40
 	逗号运算符 使用逗号将几个表达式放在一起 
 		int i, j;
@@ -58,7 +59,7 @@ using namespace std;
 		   cout << "Value of ptr :" << ptr << endl;
 		   cout << "Value of val :" << val << endl;
 
-了解运算符的优先级别
+了解运算符的优先级别 (用到时候再查看)
 */
 
 
@@ -132,7 +133,8 @@ do..while嵌套：
 
 循环控制语句：
 break 终止循环
-	1.当 break 语句出现在一个循环内时，循环会立即终止，且程序流将继续执行紧接着循环的下一条语句。
+	1.当 break 语句出现在一个循环内时，循环会立即终止，
+		且程序流将继续执行紧接着循环的下一条语句。
 	2.它可用于终止 switch 语句中的一个 case。
 	int a = 10;
 	// do 循环执行
@@ -176,15 +178,23 @@ if...else：
 		一旦某个 else if 匹配成功，其他的 else if 或 else 将不会被测试。
 嵌套if
 switch：
-	一个 switch 语句允许测试一个变量等于多个值时的情况。每个值称为一个 case，且被测试的变量会对每个 switch case 进行检查。
+	一个 switch 语句允许测试一个变量等于多个值时的情况。每个值称为一个 case，
+	且被测试的变量会对每个 switch case 进行检查。
 嵌套switch：
-	switch 语句中的 expression 必须是一个整型或枚举类型，或者是一个 class 类型，其中 class 有一个单一的转换函数将其转换为整型或枚举类型。
-	在一个 switch 中可以有任意数量的 case 语句。每个 case 后跟一个要比较的值和一个冒号。
-	case 的 constant-expression 必须与 switch 中的变量具有相同的数据类型，且必须是一个常量或字面量。
-	当被测试的变量等于 case 中的常量时，case 后跟的语句将被执行，直到遇到 break 语句为止。
+	switch 语句中的 expression 必须是一个整型或枚举类型，或者是一个 class 类型，
+	其中 class 有一个单一的转换函数将其转换为整型或枚举类型。
+	在一个 switch 中可以有任意数量的 case 语句。
+	每个 case 后跟一个要比较的值和一个冒号。
+	case 的 constant-expression 必须与 switch 中的变量具有相同的数据类型，
+	且必须是一个常量或字面量。
+	当被测试的变量等于 case 中的常量时，case 后跟的语句将被执行，
+	直到遇到 break 语句为止。
 	当遇到 break 语句时，switch 终止，控制流将跳转到 switch 语句后的下一行。
-	不是每一个 case 都需要包含 break。如果 case 语句不包含 break，控制流将会 继续 后续的 case，直到遇到 break 为止。
-	一个 switch 语句可以有一个可选的 default case，出现在 switch 的结尾。default case 可用于在上面所有 case 都不为真时执行一个任务。default case 中的 break 语句不是必需的。
+	不是每一个 case 都需要包含 break。如果 case 语句不包含 break，
+	控制流将会 继续 后续的 case，直到遇到 break 为止。
+	一个 switch 语句可以有一个可选的 default case，出现在 switch 的结尾。
+	default case 可用于在上面所有 case 都不为真时执行一个任务。
+	default case 中的 break 语句不是必需的。
 
 	char grade = 'D';
 	switch(grade)
@@ -193,7 +203,6 @@ switch：
 		cout << "很棒！" << endl; 
 		break;
 	case 'B' :
-		case 'C' :
 		cout << "做得好" << endl;
 		break;
 	case 'D' :

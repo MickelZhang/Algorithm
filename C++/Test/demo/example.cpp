@@ -31,11 +31,11 @@ int TheMonkeyEatPeach1(int n)
 {
 	if (n>10)
 	{
-	return 1;
+		return 1;
 	}
 	else
 	{
-	return (TheMonkeyEatPeach1(n+1)+1)*2;
+		return (TheMonkeyEatPeach1(n+1)+1)*2;
 	}
 }
 
@@ -76,11 +76,11 @@ int IsOddNumber1(int number)
 {
 	if (number&1)
 	{
-	return 1;
+		return 1;
 	}
 	else
 	{
-	return 0;
+		return 0;
 	}
 }
 
@@ -89,11 +89,11 @@ bool IsOddNumber2(int number)
 {
 	if (number&1)
 	{
-	return true;
+		return true;
 	}
 	else
 	{
-	return false;
+		return false;
 	}
 }
 
@@ -113,11 +113,11 @@ int Factorial(int number)
 {
 	if(number==1)
 	{
-	return 1;
+		return 1;
 	}
 	else
 	{
-	return Factorial(number-1)*number;
+		return Factorial(number-1)*number;
 	}
 }
 
@@ -137,7 +137,8 @@ int GetMaxNumberOfFactor1(int x, int y)
 {
 /*
   1.先判断两个数的大小，如果两数相等，则这个数本身就 是就是它的最大公约数。
-  2.如果不相等，则用大数减去小数，然后用这个较小数与它们相减的结果相比较，如果相等，则这个差就是它们的最大公约数，而如果不相等，则继续执行2操作。
+  2.如果不相等，则用大数减去小数，然后用这个较小数与它们相减的结果相比较，
+	如果相等，则这个差就是它们的最大公约数，而如果不相等，则继续执行2操作。
 */
 	while(1)
 	{
@@ -161,7 +162,8 @@ int GetMaxNumberOfFactor2(int x, int y)
 /*
 1.当两个数相等时，其中任意一个就是它们的最大公约数，因为它们的余数为0；
 2.当两个数不相等时，用较大数除以较小数，当余数不为0时，这时
-  使较小数作为被除数，余数作为除数，继续2的操作，直至余数为0,也就是这两个数相等时，其中任一数为最大公约数
+  使较小数作为被除数，余数作为除数，继续2的操作，直至余数为0,
+  也就是这两个数相等时，其中任一数为最大公约数
 */
 	while(x * y)  // while条件用的好
 	{
