@@ -13,7 +13,8 @@
 // 修改说明：添加常量命名规则
 // 修改人：MickelZhang
 // 时间：2020/12/18
-// 修改说明：添加.h文件的书写规范
+// 修改说明：添加.h文件的书写规范,头文件规范重新书写，应该写成和项目源代码数的全路径相关
+	    修改和添加一些规范
 // 软件版本：VS2015
 //----------------------------------------------------------------*/
 #include<iostream>
@@ -27,6 +28,9 @@ const int AREA = 50;
 
 // 求两数之和（函数声明处简单描述下函数功能即可）
 int AddNumbers(int x, int y);
+
+// 类的成员变量和普通变量命名规则一致，但是以一个下划线结尾
+
 
 // 主函数
 int main()
@@ -87,8 +91,19 @@ private:
 // 相关测试函数均以 TestForxxxxxx  开头
 
 // .h文件书写规范： https://www.cnblogs.com/hokyhu/archive/2009/03/30/1425604.html
-//采用：
-//  #ifndef __SOMEFILE_H__
+//采用：define后面应该写对应的格式：为保证唯一性, 头文件的命名应该基于所在项目源代码树的全路径. 例如, 项目 foo 中的头文件 foo/src/bar/baz.h
+// #ifndef FOO_BAR_BAZ_H_
+// #define FOO_BAR_BAZ_H_
+// ...
+// #endif // FOO_BAR_BAZ_H_
+
+
+//  #ifndef __SOMEFILE_H__  
 //  #define __SOMEFILE_H__
 //    ... ... // 声明、定义语句
 //  #endif
+
+// 关于内联函数的要求：只有当函数之后10行甚至更少时候才将其定义为内联函数，注：递归函数不要声明为内联
+
+// 使用c++风格的类型转换  static_cast<>()
+
