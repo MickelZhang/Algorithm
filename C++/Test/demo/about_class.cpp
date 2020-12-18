@@ -1,4 +1,4 @@
-/*----------------------------------------------------------------
+﻿/*----------------------------------------------------------------
 // Copyright (C) MickelZhang
 // License:MIT
 // 文件名：about_class.cpp
@@ -10,7 +10,8 @@
 // 修改说明：
 // 软件版本：VS2015
 //----------------------------------------------------------------*/
-
+#include <iostream>
+using namespace std;
 /*
 类定义是以关键字 class 开头，后跟类的名称。类的主体是包含在一对花括号中。
 类定义后必须跟着一个分号或一个声明列表。
@@ -174,14 +175,14 @@ void TestForBoxClass()
  Box box1; //实例化对象
  Box box2; //实例化对象
  double volume = 0.0;     // 用于存储体积
- Box1.height = 5.0;  // 通过. 来访问数据和方法
- Box1.length = 6.0; 
- Box1.breadth = 7.0;
- volume = Box1.height * Box1.length * Box1.breadth;
+ box1.height = 5.0;  // 通过. 来访问数据和方法
+ box1.length = 6.0;
+ box1.breadth = 7.0;
+ volume = box1.height * box1.length * box1.breadth;
  cout << "Box1 的体积：" << volume <<endl;
  
- Box2.set(16.0, 8.0, 12.0); 
- volume = Box2.get(); 
+ box2.set(16.0, 8.0, 12.0);
+ volume = box2.get();
  cout << "Box2 的体积：" << volume <<endl; 
 }
 
@@ -200,12 +201,9 @@ class Line
 {
    public:
       double getLength( void );
+	  void setLength(double len);
       Line();  // 这是构造函数声明
       ~Line();  // 这是析构函数声明
-      void setlength(double len) //也可在类的内部进行函数的定义，此时也称之为内联函数
-      {
-        length = len;
-      }
  
    private:
       double length;
@@ -262,6 +260,10 @@ double Line::getLength( void )
     return length;
 }
 
+void Line::setLength(double len) //也可在类的内部进行函数的定义，此时也称之为内联函数,但是类内部定义之后，外部访问不能访问
+{
+	length = len;
+}
 /*-----------------------------------------------------------------
 // 输入：
 // 输出：
@@ -296,9 +298,9 @@ void TestForLineClass()
 class Line2
 {
    public:
-      int getLength( void );
+      int getLength(void);
       Line2( int len );             // 简单的构造函数
-      Line2( const Line &obj);      // 拷贝构造函数
+      Line2( const Line2 &obj);      // 拷贝构造函数
       ~Line2();                     // 析构函数
  
    private:
@@ -314,7 +316,7 @@ Line2::Line2(int len)
     *ptr = len;
 }
 // 拷贝构造函数
-Line2::Line2(const Line &obj)
+Line2::Line2(const Line2 &obj)
 {
     cout << "调用拷贝构造函数并为指针 ptr 分配内存" << endl;
     ptr = new int;
