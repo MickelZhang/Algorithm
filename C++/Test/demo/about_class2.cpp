@@ -147,6 +147,29 @@ public:
 };
 
 /*-----------------------------------------------------------------
+// 输入：
+// 输出：
+// 功能描述：Shape 的继承
+// 作者：MickelZhang
+// 日期：2020/12/18
+// 修改人：
+// 记录：
+// 修改人：
+// 记录：
+// 版本：
+-----------------------------------------------------------------*/
+void TestForShape()
+{
+   Rectangle Rect;
+ 
+   Rect.setWidth(5);
+   Rect.setHeight(7);
+ 
+   // 输出对象的面积
+   cout << "Total area: " << Rect.getArea() << end
+}
+
+/*-----------------------------------------------------------------
 // 功能描述：创建一个Shape，和PaintCost基类
 // 用法：（也可以举例添加详细的使用方法，或者尽可能描述清楚）
 // 作者：MickelZhang
@@ -195,6 +218,36 @@ public:
 };
 
 /*-----------------------------------------------------------------
+// 输入：
+// 输出：
+// 功能描述：实现多继承
+// 作者：MickelZhang
+// 日期：2020/12/18
+// 修改人：
+// 记录：
+// 修改人：
+// 记录：
+// 版本：
+-----------------------------------------------------------------*/
+void TestForMultipleInheritance()
+{
+   Rectangle Rect;
+   int area;
+ 
+   Rect.setWidth(5);
+   Rect.setHeight(7);
+ 
+   area = Rect.getArea();
+   
+   // 输出对象的面积
+   cout << "Total area: " << Rect.getArea() << endl;
+ 
+   // 输出总花费
+   cout << "Total paint cost: $" << Rect.getCost(area) << endl;
+}
+
+
+/*-----------------------------------------------------------------
 // 功能描述：创建一个printData类，实现函数的重载
 // 用法：同名函数被用于输出不同的数据类型
 // 作者：MickelZhang
@@ -205,7 +258,7 @@ public:
 // 记录：
 // 版本：
 -----------------------------------------------------------------*/
-class printData
+class PrintData
 {
    public:
       void print(int i) {
@@ -220,6 +273,31 @@ class printData
         cout << "字符串为: " << c << endl;
       }
 };
+
+/*-----------------------------------------------------------------
+// 输入：
+// 输出：
+// 功能描述：对PrintData的测试  函数重载
+// 作者：MickelZhang
+// 日期：2020/12/18
+// 修改人：
+// 记录：
+// 修改人：
+// 记录：
+// 版本：
+-----------------------------------------------------------------*/
+void TestForFunctionOverload()
+{
+   PrintData pd;
+ 
+   // 输出整数
+   pd.print(5);
+   // 输出浮点数
+   pd.print(500.263);
+   // 输出字符串
+   char c[] = "Hello C++";
+   pd.print(c);
+}
 
 /*-----------------------------------------------------------------
 // 功能描述：运算符重载
@@ -269,3 +347,48 @@ class Box
       double breadth;     // 宽度
       double height;      // 高度
 };
+
+/*-----------------------------------------------------------------
+// 输入：
+// 输出：
+// 功能描述：对Box的测试  运算符重载
+// 作者：MickelZhang
+// 日期：2020/12/18
+// 修改人：
+// 记录：
+// 修改人：
+// 记录：
+// 版本：
+-----------------------------------------------------------------*/
+void TestForOperatorOverload()
+{
+  Box Box1;                // 声明 Box1，类型为 Box
+   Box Box2;                // 声明 Box2，类型为 Box
+   Box Box3;                // 声明 Box3，类型为 Box
+   double volume = 0.0;     // 把体积存储在该变量中
+ 
+   // Box1 详述
+   Box1.setLength(6.0); 
+   Box1.setBreadth(7.0); 
+   Box1.setHeight(5.0);
+ 
+   // Box2 详述
+   Box2.setLength(12.0); 
+   Box2.setBreadth(13.0); 
+   Box2.setHeight(10.0);
+ 
+   // Box1 的体积
+   volume = Box1.getVolume();
+   cout << "Volume of Box1 : " << volume <<endl;
+ 
+   // Box2 的体积
+   volume = Box2.getVolume();
+   cout << "Volume of Box2 : " << volume <<endl;
+ 
+   // 把两个对象相加，得到 Box3
+   Box3 = Box1 + Box2;
+ 
+   // Box3 的体积
+   volume = Box3.getVolume();
+   cout << "Volume of Box3 : " << volume <<endl;
+}
