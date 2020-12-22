@@ -1,20 +1,23 @@
 /*----------------------------------------------------------------
 // Copyright (C) MickelZhang
 // License:MIT
-// ÎÄ¼şÃû£ºmain.cpp
-// ÎÄ¼ş¹¦ÄÜÃèÊö£º
-// ´´½¨Õß£ºMickelZhang
-// Ê±¼ä£º2020/12/11
-// ĞŞ¸ÄÈË£ºMickelZhang
-// Ê±¼ä£º2020/12/14
-// ĞŞ¸ÄËµÃ÷£ºÌí¼Ó»ù±¾Êı¾İÀàĞÍÏà¹ØµÄ´úÂë£¬²âÊÔstatic
-// ĞŞ¸ÄÈË£ºMickelZhang
-// Ê±¼ä£º2020/12/15
-// ĞŞ¸ÄËµÃ÷£º¶Ô2020/12/14½øĞĞÏà¹ØĞŞ¸Ä
-// ĞŞ¸ÄÈË£ºMickelZhang
-// Ê±¼ä£º2020/12/17
-// ĞŞ¸ÄËµÃ÷£ºÊµÏÖ¶ÔÏà¹ØcppÎÄ¼şµÄµ÷ÓÃ
-// Èí¼ş°æ±¾£ºVS2015
+// æ–‡ä»¶åï¼šmain.cpp
+// æ–‡ä»¶åŠŸèƒ½æè¿°ï¼š
+// åˆ›å»ºè€…ï¼šMickelZhang
+// æ—¶é—´ï¼š2020/12/11
+// ä¿®æ”¹äººï¼šMickelZhang
+// æ—¶é—´ï¼š2020/12/14
+// ä¿®æ”¹è¯´æ˜ï¼šæ·»åŠ åŸºæœ¬æ•°æ®ç±»å‹ç›¸å…³çš„ä»£ç ï¼Œæµ‹è¯•static
+// ä¿®æ”¹äººï¼šMickelZhang
+// æ—¶é—´ï¼š2020/12/15
+// ä¿®æ”¹è¯´æ˜ï¼šå¯¹2020/12/14è¿›è¡Œç›¸å…³ä¿®æ”¹
+// ä¿®æ”¹äººï¼šMickelZhang
+// æ—¶é—´ï¼š2020/12/17
+// ä¿®æ”¹è¯´æ˜ï¼šå®ç°å¯¹ç›¸å…³cppæ–‡ä»¶çš„è°ƒç”¨
+// ä¿®æ”¹äººï¼šMickelZhang
+// æ—¶é—´ï¼š2020/12/22
+// ä¿®æ”¹è¯´æ˜ï¼šæ–‡ä»¶åŠŸèƒ½æè¿°ï¼šæµ‹è¯•ç›¸å…³ä»£ç ï¼ŒC++ä¸­çš„å¸¸é‡å®šä¹‰
+// è½¯ä»¶ç‰ˆæœ¬ï¼šVS2015
 //----------------------------------------------------------------*/
 #include <iostream>
 #include <limits>
@@ -25,38 +28,38 @@
 #include "operator.h"
 #include "pointer.h"
 
-using namespace std;  // ÃüÃû¿Õ¼ä
+using namespace std;  // å‘½åç©ºé—´
 
-// ²âÊÔstaticÏà¹ØµÄ¹¦ÄÜ
+// æµ‹è¯•staticç›¸å…³çš„åŠŸèƒ½
 void TestForStatic(void);
 
-int g;  // È«¾Ö±äÁ¿£¬Õû¸öÉúÃüÖÜÆÚ¶¼ÊÇÓĞĞ§µÄ£¬È«¾Ö±äÁ¿»áÄ¬ÈÏ¸ø¶¨³õÊ¼»¯µÄÖµ
-// ³£Á¿¶¨ÒåµÄÁ½ÖÖ·½·¨,³£Á¿Ò»°ãÎªÈ«²¿´óĞ´µÄ·½Ê½
+int g;  // å…¨å±€å˜é‡ï¼Œæ•´ä¸ªç”Ÿå‘½å‘¨æœŸéƒ½æ˜¯æœ‰æ•ˆçš„ï¼Œå…¨å±€å˜é‡ä¼šé»˜è®¤ç»™å®šåˆå§‹åŒ–çš„å€¼
+// å¸¸é‡å®šä¹‰çš„ä¸¤ç§æ–¹æ³•,å¸¸é‡ä¸€èˆ¬ä¸ºå…¨éƒ¨å¤§å†™çš„æ–¹å¼
 #define LENGHT 10
 #define WIDTH 5
 const int AREA = 50;
-static int count_number = 10; /* È«¾Ö±äÁ¿ */
+static int count_number = 10; /* å…¨å±€å˜é‡ */
 
 // test for extern
 int countnum;
 extern void write_extern();
 
-// Ö÷º¯Êı
+// ä¸»å‡½æ•°
 int main()
 {
 	//cout << "hello,world\n";
-	std::cout << "hello,Mickel" << std::endl;  //endlºÍ\n½á¹ûÒ»Ñù 2020/12/14
-	//BaseDataType();  // Êı¾İÀàĞÍËùÕ¼¿Õ¼ä´óĞ¡
+	std::cout << "hello,Mickel" << std::endl;  //endlå’Œ\nç»“æœä¸€æ · 2020/12/14
+	//BaseDataType();  // æ•°æ®ç±»å‹æ‰€å ç©ºé—´å¤§å°
 	string str = "hello";
 	cout << str << endl;
 	//int a = 0;
 	//cout << "a:"<<a << endl;
-	//cout << "g:" << g << endl; // Ä¬ÈÏ¸³ÖµÎª0
+	//cout << "g:" << g << endl; // é»˜è®¤èµ‹å€¼ä¸º0
 
-	//int a;  // ¾Ö²¿±äÁ¿£¬¶¨ÒåºóÏµÍ³²»»á³õÊ¼»¯£¬ĞèÒªÈËÎª³õÊ¼»¯ÊıÖµ£¬·ñÔò±¨´í
+	//int a;  // å±€éƒ¨å˜é‡ï¼Œå®šä¹‰åç³»ç»Ÿä¸ä¼šåˆå§‹åŒ–ï¼Œéœ€è¦äººä¸ºåˆå§‹åŒ–æ•°å€¼ï¼Œå¦åˆ™æŠ¥é”™
 
 
-	// ²âÊÔstaticµÄ´úÂë¶Î
+	// æµ‹è¯•staticçš„ä»£ç æ®µ
 	//while (count_number--)
 	//{
 	//	TestForStatic();
@@ -66,7 +69,7 @@ int main()
 	//countnum= 5;
 	//write_extern();
 
-	//º¯Êı´«²ÎµÄ¼¸ÖÖĞÎÊ½£¬from function.cpp
+	//å‡½æ•°ä¼ å‚çš„å‡ ç§å½¢å¼ï¼Œfrom function.cpp
 	int x, y;
 	x = 5;
 	y = 9;
@@ -75,7 +78,7 @@ int main()
 	SwapOfQuote(x, y);
 	cout << x << y << endl;
 
-	//Êı¾İÀàĞÍ from data_type.cpp
+	//æ•°æ®ç±»å‹ from data_type.cpp
 	//RandomNumber();
 	//TestForArray();
 	//ThePointerOfArray();
@@ -94,11 +97,11 @@ int main()
 	//TestForStructOfFunction();
 	//TestForStructPointer();
 
-	//²Ù×÷·û from operator.cpp
+	//æ“ä½œç¬¦ from operator.cpp
 	//TestForSelfIncrease();
 
 
-	//Ö¸ÕëÏà¹Ø from pointer.cpp
+	//æŒ‡é’ˆç›¸å…³ from pointer.cpp
 	//TestForPoint();
 	//TestForPointerIncreaseToArray();
 	//TestForPointerCompare();
@@ -117,21 +120,21 @@ int main()
 }
 
 /*-----------------------------------------------------------------
-// ÊäÈë£ºvoid
-// Êä³ö£º
-// ¹¦ÄÜÃèÊö£º²âÊÔstaticµÄÏà¹Ø¹¦ÄÜ
-// ×÷Õß£ºMickelZhang
-// ÈÕÆÚ£º2020/12/14
-// ĞŞ¸ÄÈË£º
-// ¼ÇÂ¼£º
-// ĞŞ¸ÄÈË£º
-// ¼ÇÂ¼£º
-// °æ±¾£º
+// è¾“å…¥ï¼švoid
+// è¾“å‡ºï¼š
+// åŠŸèƒ½æè¿°ï¼šæµ‹è¯•staticçš„ç›¸å…³åŠŸèƒ½
+// ä½œè€…ï¼šMickelZhang
+// æ—¥æœŸï¼š2020/12/14
+// ä¿®æ”¹äººï¼š
+// è®°å½•ï¼š
+// ä¿®æ”¹äººï¼š
+// è®°å½•ï¼š
+// ç‰ˆæœ¬ï¼š
 -----------------------------------------------------------------*/
 void TestForStatic(void)
 {
-	static int i = 5; // ¾Ö²¿¾²Ì¬±äÁ¿
+	static int i = 5; // å±€éƒ¨é™æ€å˜é‡
 	i++;
-	std::cout << "±äÁ¿ i Îª " << i;
-	std::cout << " , ±äÁ¿ count Îª " << count_number << std::endl;
+	std::cout << "å˜é‡ i ä¸º " << i;
+	std::cout << " , å˜é‡ count ä¸º " << count_number << std::endl;
 }
