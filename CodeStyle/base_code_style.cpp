@@ -29,6 +29,9 @@ using namespace std;
 #define WIDTH 5
 const int AREA = 50;
 
+// 全局变量定义方式:全局变量以g_开头
+int g_num;
+
 // 求两数之和（函数声明处简单描述下函数功能即可）
 int AddNumbers(int x, int y);
 

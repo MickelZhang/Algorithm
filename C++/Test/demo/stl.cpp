@@ -1,8 +1,8 @@
 /*----------------------------------------------------------------
 // Copyright (C) MickelZhang
 // License:MIT
-// 文件名：about_class2.cpp
-// 文件功能描述：类的继承，重载
+// 文件名：stl.cpp
+// 文件功能描述：STL相关
 // 创建者：MickelZhang
 // 时间：2020/12/21
 // 修改人：
@@ -10,6 +10,9 @@
 // 修改说明：相关链接说明：https://blog.csdn.net/u014465639/article/details/70241850
 // 软件版本：VS2015
 //----------------------------------------------------------------*/
+#include <iostream>
+#include <vector>
+using namespace std;
 
 /*
 容器（Containers）	容器是用来管理某一类对象的集合。C++ 提供了各种不同类型的容器，比如 deque、list、vector、map 等。
@@ -233,10 +236,6 @@
 
 
 */
-
-#include <iostream>
-#include <vector>
-using namespace std;
 
 //它与数组十分相似，唯一不同的是，向量在需要扩展大小的时候，
 //会自动处理它自己的存储需求

@@ -11,6 +11,10 @@
 // 软件版本：VS2015
 //----------------------------------------------------------------*/
 
+#include <iostream>
+#include "about_class3.h"
+using namespace std;
+
 /*
 多态
 按字面的意思就是多种形态。当类之间存在层次结构，并且类之间是通过继承关联时，就会用到多态。
@@ -95,6 +99,7 @@ class Shape {
          height = b;
       }
       // 此处使用int area()  和 virtual int area() 的区别 
+	  virtual int area()
       {
          cout << "Parent class area :" <<endl;
          return 0;
@@ -202,5 +207,4 @@ void TestForDataAbstract()
    a.addNum(30);
  
    cout << "Total " << a.getTotal() <<endl;
-   return 0;
 }

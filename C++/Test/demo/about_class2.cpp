@@ -11,6 +11,7 @@
 // 软件版本：VS2015
 //----------------------------------------------------------------*/
 #include <iostream>
+#include "about_class2.h"
 using namespace std;
 
 /*
@@ -166,7 +167,7 @@ void TestForShape()
    Rect.setHeight(7);
  
    // 输出对象的面积
-   cout << "Total area: " << Rect.getArea() << end
+   cout << "Total area: " << Rect.getArea() << endl;
 }
 
 /*-----------------------------------------------------------------
@@ -208,7 +209,7 @@ public:
 };
 
 // 派生类
-class Rectangle : public Shape2, public PaintCost
+class Rectangle2 : public Shape2, public PaintCost
 {
 public:
 	int getArea()
@@ -231,19 +232,19 @@ public:
 -----------------------------------------------------------------*/
 void TestForMultipleInheritance()
 {
-   Rectangle Rect;
+   Rectangle2 Rect2;
    int area;
  
-   Rect.setWidth(5);
-   Rect.setHeight(7);
+   Rect2.setWidth(5);
+   Rect2.setHeight(7);
  
-   area = Rect.getArea();
+   area = Rect2.getArea();
    
    // 输出对象的面积
-   cout << "Total area: " << Rect.getArea() << endl;
+   cout << "Total area: " << Rect2.getArea() << endl;
  
    // 输出总花费
-   cout << "Total paint cost: $" << Rect.getCost(area) << endl;
+   cout << "Total paint cost: $" << Rect2.getCost(area) << endl;
 }
 
 

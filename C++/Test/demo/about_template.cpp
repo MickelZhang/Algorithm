@@ -1,4 +1,4 @@
-/*----------------------------------------------------------------
+﻿/*----------------------------------------------------------------
 // Copyright (C) MickelZhang
 // License:MIT
 // 文件名：about_template.cpp
@@ -10,6 +10,13 @@
 // 修改说明：
 // 软件版本：VS2015
 //----------------------------------------------------------------*/
+#include <iostream>
+#include <string>
+#include <vector>
+#include <cstdlib>
+#include <stdexcept>
+#include "about_template.h"
+using namespace std;
 
 /*
 命名空间：
@@ -159,7 +166,7 @@ void TestForTemplateFunction()
  
     string s1 = "Hello"; 
     string s2 = "World"; 
-    cout << "Max(s1, s2): " << Max(s1, s2) << endl; 
+    cout << "Max(s1, s2): "<<Max(s1, s2) << endl; 
 }
 
 /*-----------------------------------------------------------------
@@ -225,7 +232,7 @@ T Stack<T>::top () const
 // 记录：
 // 版本：
 -----------------------------------------------------------------*/
-void TestForTemplateClass()
+int TestForTemplateClass()
 {
       try { 
         Stack<int>         intStack;  // int 类型的栈 

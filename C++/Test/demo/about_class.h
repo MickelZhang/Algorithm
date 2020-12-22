@@ -1,4 +1,4 @@
-/*----------------------------------------------------------------
+﻿/*----------------------------------------------------------------
 // Copyright (C) MickelZhang
 // License:MIT
 // 文件名：about_class.h
@@ -12,5 +12,13 @@
 //----------------------------------------------------------------*/
 #ifndef ABOUT_CLASS_H
 #define  ABOUT_CLASS_H
+
+void TestForBoxClass();
+void TestForLineClass();
+void TestForLine2Class();
+void TestForThePointerOfThis();
+void TestForPointerOfPointClass();
+void TestForBox4();
+void TestForBox5();
 
 #endif

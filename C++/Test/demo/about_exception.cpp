@@ -1,7 +1,7 @@
 /*----------------------------------------------------------------
 // Copyright (C) MickelZhang
 // License:MIT
-// 文件名：about_class2.cpp
+// 文件名：about_exception.cpp
 // 文件功能描述：异常处理
 // 创建者：MickelZhang
 // 时间：2020/12/22
@@ -10,6 +10,10 @@
 // 修改说明：
 // 软件版本：VS2015
 //----------------------------------------------------------------*/
+#include <iostream>
+#include "about_exception.h"
+using namespace std;
+double Division(int a, int b);
 
 /*
 异常是程序在执行期间产生的问题。C++ 异常是指在程序运行时发生的特殊情况，比如尝试除以零的操作。
@@ -72,13 +76,14 @@ std::underflow_error	当发生数学下溢时，会抛出该异常。
 -----------------------------------------------------------------*/
 void TestForDivision()
 {
-  int a =5;
-  int b = 0;
-  Division()
+  int a = 5;
+  int b = 9;
+  Division(a, b);
 }
+
 double Division(int a, int b)
 {
-   if( b == 0 )
+   if(b == 0)
    {
       throw "Division by zero condition!";
    }

@@ -10,6 +10,9 @@
 // 修改说明：
 // 软件版本：VS2015
 //----------------------------------------------------------------*/
+#include <iostream>
+#include "about_class4.h"
+using namespace std;
 
 /*
 数据封装：
@@ -85,7 +88,7 @@ class Box
 // 用法：（也可以举例添加详细的使用方法，或者尽可能描述清楚）
 // 作者：MickelZhang
 // 日期：2020/12/22
-// 修改人：MickelZhang 2020/12/12
+// 修改人：
 // 记录：
 // 修改人：
 // 记录：
@@ -143,7 +146,8 @@ public:
 void TestForInterFace()
 {
   /*
-  们可以看到一个抽象类是如何定义一个接口 getArea()，两个派生类是如何通过不同的计算面积的算法来实现这个相同的函数。
+  们可以看到一个抽象类是如何定义一个接口 getArea()，
+  两个派生类是如何通过不同的计算面积的算法来实现这个相同的函数。
   */
    Rectangle Rect;
    Triangle  Tri;
@@ -152,7 +156,6 @@ void TestForInterFace()
    Rect.setHeight(7);
    // 输出对象的面积
    cout << "Total Rectangle area: " << Rect.getArea() << endl;
- 
    Tri.setWidth(5);
    Tri.setHeight(7);
    // 输出对象的面积

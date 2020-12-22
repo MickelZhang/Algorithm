@@ -27,18 +27,25 @@
 #include "data_type.h"
 #include "operator.h"
 #include "pointer.h"
+#include "about_class.h"
+#include "about_class2.h"
+#include "about_class3.h"
+#include "about_class4.h"
+#include "stl.h"
+#include "about_exception.h"
+#include "about_template.h"
 
 using namespace std;  // 命名空间
 
 // 测试static相关的功能
 void TestForStatic(void);
 
-int g;  // 全局变量，整个生命周期都是有效的，全局变量会默认给定初始化的值
+int g_num;  // 全局变量，整个生命周期都是有效的，全局变量会默认给定初始化的值
 // 常量定义的两种方法,常量一般为全部大写的方式
 #define LENGHT 10
 #define WIDTH 5
 const int AREA = 50;
-static int count_number = 10; /* 全局变量 */
+static int g_count_number = 10; /* 全局变量 */
 
 // test for extern
 int countnum;
@@ -50,8 +57,8 @@ int main()
 	//cout << "hello,world\n";
 	std::cout << "hello,Mickel" << std::endl;  //endl和\n结果一样 2020/12/14
 	//BaseDataType();  // 数据类型所占空间大小
-	string str = "hello";
-	cout << str << endl;
+	//string str = "hello";
+	//cout << str << endl;
 	//int a = 0;
 	//cout << "a:"<<a << endl;
 	//cout << "g:" << g << endl; // 默认赋值为0
@@ -70,13 +77,13 @@ int main()
 	//write_extern();
 
 	//函数传参的几种形式，from function.cpp
-	int x, y;
-	x = 5;
-	y = 9;
+	//int x, y;
+	//x = 5;
+	//y = 9;
 	//SwapOfValue(x, y);
 	//SwapOfPointer(&x, &y);
-	SwapOfQuote(x, y);
-	cout << x << y << endl;
+	//SwapOfQuote(x, y);
+	//cout << x << y << endl;
 
 	//数据类型 from data_type.cpp
 	//RandomNumber();
@@ -96,6 +103,10 @@ int main()
 	//TestForStruct();
 	//TestForStructOfFunction();
 	//TestForStructPointer();
+	//TestForMemory();
+	//TestForTwoDimensionalArray();
+	//TestForThreeDimensionalArray();
+	//TestForMemoryOfObject();
 
 	//操作符 from operator.cpp
 	//TestForSelfIncrease();
@@ -115,6 +126,36 @@ int main()
 	//double avg;
 	//GetAverage(balance, 5);
 	//TestForSetValues();
+
+	//类相关 
+	//TestForBoxClass();
+	//TestForLineClass();
+	//TestForLine2Class();
+	//TestForThePointerOfThis();
+	//TestForPointerOfPointClass();
+	//TestForBox4();
+	//TestForBox5();
+	//TestForShape();
+	//TestForMultipleInheritance();
+	//TestForFunctionOverload();
+	//TestForOperatorOverload();
+	//TestForShapePolymorphism();
+	//TestForDataAbstract();
+	//TestForInterFace();
+
+	//STL相关
+	//TestForVector();
+
+	//异常处理
+	//TestForDivision(); 
+	//TestForExceptionOfDivision();
+
+	//模板，命名空间
+	TestForNamespace();
+	int flag = TestForTemplateClass();
+	TestForTemplateFunction();
+
+
 
 	return 0;
 }
@@ -136,5 +177,5 @@ void TestForStatic(void)
 	static int i = 5; // 局部静态变量
 	i++;
 	std::cout << "变量 i 为 " << i;
-	std::cout << " , 变量 count 为 " << count_number << std::endl;
+	std::cout << " , 变量 count 为 " << g_count_number << std::endl;
 }

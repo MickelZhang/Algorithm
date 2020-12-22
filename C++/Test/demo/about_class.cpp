@@ -7,10 +7,11 @@
 // 时间：2020/12/17
 // 修改人：MickelZhang
 // 时间：2020/12/22
-// 修改说明：文件功能描述详细：类&面向对象
+// 修改说明：文件功能描述详细：类&面向对象,其中有些变量命名并不是很规范，目前先不做修改。
 // 软件版本：VS2015
 //----------------------------------------------------------------*/
 #include <iostream>
+#include "about_class.h"
 using namespace std;
 /*
 类定义是以关键字 class 开头，后跟类的名称。类的主体是包含在一对花括号中。
@@ -109,15 +110,15 @@ C++类的静态成员函数：如果把函数成员声明为静态的，
 class Box
 {
   public:
-    double length; //盒子的长度
-    double breadth; //盒子的宽度
-    double height; //盒子的高度
-    double get(void); // 成员函数声明
-    void set(double len, double bre,double hei); // 成员函数声明
+    double length;  //盒子的长度
+    double breadth;  //盒子的宽度
+    double height;  //盒子的高度
+    double get(void);  //成员函数声明
+    void set(double len, double bre,double hei);  //成员函数声明
   private:
-    double perimeter; //私有变量 周长
+    double perimeter;  //私有变量 周长
   protected:
-    double area; // 受保护成员 面积
+    double area;  //受保护成员 面积
 };
 
 /*-----------------------------------------------------------------
@@ -170,15 +171,14 @@ void Box::set( double len, double bre, double hei)
 -----------------------------------------------------------------*/
 void TestForBoxClass()
 {
- Box box1; //实例化对象
- Box box2; //实例化对象
- double volume = 0.0;     // 用于存储体积
+ Box box1;  //实例化对象
+ Box box2;  //实例化对象
+ double volume = 0.0;  // 用于存储体积
  box1.height = 5.0;  // 通过. 来访问数据和方法
  box1.length = 6.0;
  box1.breadth = 7.0;
  volume = box1.height * box1.length * box1.breadth;
  cout << "Box1 的体积：" << volume <<endl;
- 
  box2.set(16.0, 8.0, 12.0);
  volume = box2.get();
  cout << "Box2 的体积：" << volume <<endl; 
@@ -320,7 +320,7 @@ void display(Line2 obj)
 void TestForLine2Class()
 {
    Line2 line2_1(10);
-   Line2 line2_2 = line2_1; // 这里也调用了拷贝构造函数
+   Line2 line2_2 = line2_1;  //这里也调用了拷贝构造函数
    display(line2_1);
    display(line2_2);
 }
@@ -339,9 +339,6 @@ void TestForLine2Class()
 // TODO(1223256867@qq.com)
 // TODO(MickelZhang)
 // TODO 友元函数暂时用不到，目前不需要花时间在这上面
-
-
-
 
 /*-----------------------------------------------------------------
 // 功能描述：内联函数的使用
@@ -414,16 +411,16 @@ class Box2
 -----------------------------------------------------------------*/
 void TestForThePointerOfThis()
 {
-   Box2 Box1(3.3, 1.2, 1.5);    // Declare box1
-   Box2 Box2(8.5, 6.0, 2.0);    // Declare box2
- 
-   if(Box2.compare(Box2))
+   Box2 box2_1(3.3, 1.2, 1.5);    
+   Box2 box2_2(8.5, 6.0, 2.0);   
+
+   if(box2_1.compare(box2_2))
    {
-      cout << "Box2 is smaller than Box1" <<endl;
+      cout << "box2_2 is smaller than box2_1" <<endl;
    }
    else
    {
-      cout << "Box2 is equal to or larger than Box1" <<endl;
+      cout << "box2_2 is equal to or larger than box2_1" <<endl;
    }
 }
 
@@ -526,6 +523,8 @@ private:
 	double height;     // 高度
 };
 
+
+int Box4::objectCount = 0;
 /*-----------------------------------------------------------------
 // 输入：
 // 输出：
@@ -540,17 +539,14 @@ private:
 -----------------------------------------------------------------*/
 void TestForBox4()
 {
-/*调用方法：
+/*
+调用方法：
 需要在主函数外面先初始化静态成员：
 int Box4::objectCount = 0;  // main函数外面
-
-   Box4 Box4_1(3.3, 1.2, 1.5);    // 声明 box1
-   Box4 Box4_2(8.5, 6.0, 2.0);    // 声明 box2
- 
-   // 输出对象的总数
-   cout << "Total objects: " << Box4::objectCount << endl;
-
 */
+	Box4 Box4_1(3.3, 1.2, 1.5);    
+	Box4 Box4_2(8.5, 6.0, 2.0);    
+	cout << "Total objects: " << Box4::objectCount << endl;
 
 }
 
@@ -593,6 +589,7 @@ private:
 	double height;     // 高度
 };
 
+int Box5::objectCount = 0;
 /*-----------------------------------------------------------------
 // 输入：
 // 输出：
@@ -607,17 +604,14 @@ private:
 -----------------------------------------------------------------*/
 void TestForBox5()
 {
-/*调用方法：
+/*
+调用方法：
 需要在主函数外面先初始化静态成员：
 int Box5::objectCount = 0;
-   // 在创建对象之前输出对象的总数
-   cout << "Inital Stage Count: " << Box::getCount() << endl;
- 
-   Box5 Box5_1(3.3, 1.2, 1.5);    // 声明 box1
-   Box5 Box5_2(8.5, 6.0, 2.0);    // 声明 box2
- 
-   // 在创建对象之后输出对象的总数
-   cout << "Final Stage Count: " << Box5::getCount() << endl;
-
 */
+	cout << "Inital Stage Count: " << Box5::getCount() << endl;
+	Box5 Box5_1(3.3, 1.2, 1.5);    
+	Box5 Box5_2(8.5, 6.0, 2.0);    
+	// 在创建对象之后输出对象的总数
+	cout << "Final Stage Count: " << Box5::getCount() << endl;
 }

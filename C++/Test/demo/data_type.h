@@ -5,9 +5,9 @@
 // 文件功能描述：编写.h 头文件，提供给其他文件调用
 // 创建者：MickelZhang
 // 时间：2020/12/17
-// 修改人：
-// 时间：
-// 修改说明：
+// 修改人：MickelZhang
+// 时间：2020/12/22
+// 修改说明：添加动态内存分配的相关测试代码
 // 软件版本：VS2015
 //----------------------------------------------------------------*/
 
@@ -24,5 +24,9 @@ void printBook(struct Books book);
 void TestForStructOfFunction();
 void printBook2(struct Books *book);
 void TestForStructPointer();
+void TestForMemory();
+void TestForTwoDimensionalArray();
+void TestForThreeDimensionalArray();
+void TestForMemoryOfObject();
 
 #endif
