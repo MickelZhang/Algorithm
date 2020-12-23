@@ -1,14 +1,14 @@
 /*----------------------------------------------------------------
 // Copyright (C) MickelZhang
 // License:MIT
-// ÎÄ¼şÃû£ºabout_template.h
-// ÎÄ¼ş¹¦ÄÜÃèÊö£ºÄ£°å£¬ÃüÃû¿Õ¼ä£¬Ô¤´¦ÀíÆ÷£¨ÄÚÈİ½ÏÉÙÌí¼Ó½øÀ´£©
-// ´´½¨Õß£ºMickelZhang
-// Ê±¼ä£º2020/12/22
-// ĞŞ¸ÄÈË£º
-// Ê±¼ä£º
-// ĞŞ¸ÄËµÃ÷£º
-// Èí¼ş°æ±¾£ºVS2015
+// æ–‡ä»¶åï¼šabout_template.h
+// æ–‡ä»¶åŠŸèƒ½æè¿°ï¼šæ¨¡æ¿ï¼Œå‘½åç©ºé—´ï¼Œé¢„å¤„ç†å™¨ï¼ˆå†…å®¹è¾ƒå°‘æ·»åŠ è¿›æ¥ï¼‰
+// åˆ›å»ºè€…ï¼šMickelZhang
+// æ—¶é—´ï¼š2020/12/22
+// ä¿®æ”¹äººï¼š
+// æ—¶é—´ï¼š
+// ä¿®æ”¹è¯´æ˜ï¼š
+// è½¯ä»¶ç‰ˆæœ¬ï¼šVS2015
 //----------------------------------------------------------------*/
 #ifndef ABOUT_TEMPLATE_H
 #define  ABOUT_TEMPLATE_H
@@ -16,6 +16,9 @@
 void TestForNamespace();
 int TestForTemplateClass();
 void TestForTemplateFunction();
+void TestForTemplateOfSwap();
+void TestForTemplateMyMax();
+void TestForPair();
 
 #endif
 
