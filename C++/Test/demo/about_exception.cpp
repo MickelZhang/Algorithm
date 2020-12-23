@@ -11,6 +11,7 @@
 // 软件版本：VS2015
 //----------------------------------------------------------------*/
 #include <iostream>
+#include <stdExcept>
 #include "about_exception.h"
 using namespace std;
 double Division(int a, int b);
@@ -117,6 +118,65 @@ void TestForExceptionOfDivision()
    }
 }
 
-// TODO(1223256867@qq.com / 18502290727@163.com)
-// TODO(MickelZhang)
-// TODO(自定义的异常类的举例)
+/*-----------------------------------------------------------------
+// 功能描述：编写属于自己的异常类
+// 用法：
+// 作者：MickelZhang
+// 日期：2020/12/18
+// 修改人：MickelZhang 2020/12/12
+// 记录：
+// 修改人：
+// 记录：参考链接：https://blog.csdn.net/misayaaaaa/article/details/90108912
+//                https://blog.csdn.net/abc_123_linbin/article/details/52893685
+//                https://www.cnblogs.com/laizhenghong2012/p/11782299.html
+// 版本：
+-----------------------------------------------------------------*/
+class myException :public exception
+{
+public:
+	myException(char* c)
+	{
+		m_p = c;
+	}
+	//what()函数返回错误信息
+	virtual char* what()
+	{
+		cout << "异常类型为 myException: "<< m_p << endl;
+		return m_p;
+	}
+private:
+	char *m_p;
+};
+
+/*-----------------------------------------------------------------
+// 输入：
+// 输出：
+// 功能描述：测试自己编写的异常类
+// 作者：MickelZhang
+// 日期：2020/12/22
+// 修改人：
+// 记录：
+// 修改人：
+// 记录：
+// 版本：
+-----------------------------------------------------------------*/
+void TestForMyException()
+{
+	try
+	{
+		throw myException("出错啦！");
+	}
+	catch (myException& e)
+	{
+		e.what();
+	}
+	catch (bad_alloc& e)
+	{
+		e.what();
+	}
+	catch (...)
+	{
+		cout << "Unknown Error" << endl;
+	}
+}
+
