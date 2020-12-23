@@ -25,5 +25,7 @@ void TestForGetSeconds(unsigned long *par);
 double GetAverage(int *arr, int size);
 double& setValues(int i);
 void TestForSetValues();
+void TestForTime();
+void TestForTime2();
 
 #endif
