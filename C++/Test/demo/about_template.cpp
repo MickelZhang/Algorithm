@@ -254,6 +254,108 @@ int TestForTemplateClass()
     } 
 }
 
-// TODO(1223256867@qq.com / 18502290727@163.com)
-// TODO(MickelZhang)
-// TODO(关于模板类和模板函数再两个举例子)
+/*-----------------------------------------------------------------
+// 输入：
+// 输出：
+// 功能描述：使用函数模板实现两个数的交换
+// 作者：MickelZhang
+// 日期：2020/12/23
+// 修改人：
+// 记录：参考链接：https://zhuanlan.zhihu.com/p/101898043
+// 修改人：
+// 记录：
+// 版本：
+-----------------------------------------------------------------*/
+template <class T>
+void Swap(T &x,T &y)
+{
+    T tmp = x;
+    x = y;
+    y = tmp;
+}
+
+// 函数模板的调用
+void TestForTemplateOfSwap()
+{
+  int n = 1,m = 2;
+  Swap(n,m);
+  cout<<n<<m<<endl;
+  double i = 3.4, j = 9.6;
+  Swap(i,j);
+  cout<<i<<j<<endl;
+}
+
+/*-----------------------------------------------------------------
+// 输入：两个不同类型的数找最大值
+// 输出：
+// 功能描述：
+// 作者：MickelZhang
+// 日期：2020/12/23
+// 修改人：
+// 记录：参考链接：https://zhuanlan.zhihu.com/p/101898043
+//                https://blog.csdn.net/hellokandy/article/details/70173366
+// 修改人：
+// 记录：
+// 版本：
+-----------------------------------------------------------------*/
+template <class T, class T2>
+T MyMax(T a, T2 b) 
+{
+  if (a > b)
+  {
+    cout<<"最大值："<<a<<endl;
+  }
+  else
+  {
+    cout<<"最大值："<<b<<endl;
+  }
+    return 0;
+}
+
+// 输入两个不同的参数类型的模板函数调用
+
+// 函数模板的调用
+void TestForTemplateMyMax()
+{
+  MyMax(3, 5.6);
+}
+
+/*-----------------------------------------------------------------
+// 输入：
+// 输出：
+// 功能描述：Pair类模板例子
+// 作者：MickelZhang
+// 日期：2020/12/23
+// 修改人：
+// 记录：参考链接：https://zhuanlan.zhihu.com/p/101898043
+//                https://blog.csdn.net/hellokandy/article/details/70173366
+// 修改人：
+// 记录：
+// 版本：
+-----------------------------------------------------------------*/
+template <class T1, class T2>
+class Pair
+{
+public:
+    Pair(T1 k, T2 v):m_key(k),m_value(v) {};
+    bool operator < (const Pair<T1,T2> & p) const;
+private:
+    T1 m_key;
+    T2 m_value;
+};
+
+// 类模板里成员函数的写法
+template <class T1, class T2>
+bool Pair<T1,T2>::operator < (const Pair<T1,T2> &p) const
+{
+    return m_value < p.m_value;
+}
+
+// 类模板的测试代码
+void TestForPair()
+{
+    Pair<string,int> Astudent("Jay",20); 
+    Pair<string,int> Bstudent("Tom",21);
+  cout << (Astudent < Bstudent) << endl;
+}
+
