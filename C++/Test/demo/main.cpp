@@ -149,11 +149,15 @@ int main()
 	//异常处理
 	//TestForDivision(); 
 	//TestForExceptionOfDivision();
+	TestForMyException();
 
 	//模板，命名空间
-	TestForNamespace();
-	int flag = TestForTemplateClass();
-	TestForTemplateFunction();
+	//TestForNamespace();
+	//int flag = TestForTemplateClass();
+	//TestForTemplateFunction();
+	//TestForTemplateOfSwap();
+	//TestForTemplateMyMax();
+	//TestForPair();
 
 
 

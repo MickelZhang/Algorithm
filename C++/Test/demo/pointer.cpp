@@ -486,16 +486,16 @@ double elapsed_secs = static_cast<double>(end - start) / (CLOCKS_PER_SEC);
 cout <<elapsed_secs <<"s"<<endl;
 }
 
-void TestForTime2()
-{
-    LARGE_INTEGER t1,t2,tc;
-    QueryPerformanceFrequency(&tc);
-    QueryPerformanceCounter(&t1);
-    //codes
-    QueryPerformanceCounter(&t2);
-    time=(double)(t2.QuadPart-t1.QuadPart)/(double)tc.QuadPart; 
-    cout<<"time = "<<time<<endl;  //输出时间（单位：ｓ）
-}
+//void TestForTime2()
+//{
+//    LARGE_INTEGER t1,t2,tc;
+//    QueryPerformanceFrequency(&tc);
+//    QueryPerformanceCounter(&t1);
+//    //codes
+//    QueryPerformanceCounter(&t2);
+//    time=(double)(t2.QuadPart-t1.QuadPart)/(double)tc.QuadPart; 
+//    cout<<"time = "<<time<<endl;  //输出时间（单位：ｓ）
+//}
 /*
 输入和输出：
 C++ 的 I/O 发生在流中，流是字节序列。
