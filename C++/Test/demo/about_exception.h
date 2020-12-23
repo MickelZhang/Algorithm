@@ -1,20 +1,21 @@
 /*----------------------------------------------------------------
 // Copyright (C) MickelZhang
 // License:MIT
-// �ļ�����about_exception.h
-// �ļ������������쳣����
-// �����ߣ�MickelZhang
-// ʱ�䣺2020/12/22
-// �޸��ˣ�
-// ʱ�䣺
-// �޸�˵����
-// �����汾��VS2015
+// 文件名：about_exception.h
+// 文件功能描述：异常处理
+// 创建者：MickelZhang
+// 时间：2020/12/22
+// 修改人：
+// 时间：
+// 修改说明：
+// 软件版本：VS2015
 //----------------------------------------------------------------*/
 #ifndef ABOUT_EXCEPTION_H
 #define  ABOUT_EXCEPTION_H
 
 void TestForDivision();
 void TestForExceptionOfDivision();
+void TestForMyException();
 
 #endif
 
