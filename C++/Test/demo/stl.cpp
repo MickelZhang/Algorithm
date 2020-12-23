@@ -43,6 +43,8 @@ using namespace std;
 		 vector<int> vec5(10,4);  //10个值为4的元素
 		 vector<string> vec6(10,"null");    //10个值为null的元素
 		 vector<string> vec7(10,"hello");  //10个值为hello的元素
+		 vector<vector<Point2f> > points; //定义一个二维数组
+		 points[0].size();  //指第一行的列数
 	操作方法：
 		    vec1.push_back(100);            //添加元素
 		    int size = vec1.size();         //元素个数
@@ -68,9 +70,13 @@ using namespace std;
 		     for (;iterator != vec1.end();iterator++)
 		    {
 		       cout<<*iterator；
-
 		    }
+		    
+		当vector作为函数参数或者返回值的时候：double Distance(vector<int>&a);  要有&运算符
+		vector 相关算法：#include<algorithm> 中将元素翻转reverse,排序sort
 	2.list(需要导入头文件#include <list>)
+参考链接：https://www.geeksforgeeks.org/list-cpp-stl/
+	 https://blog.csdn.net/lskyne/article/details/10418823
 		定义和初始化：
 		    list<int> lst1;          //创建空list
 		    list<int> lst2(3);       //创建含有三个元素的list
@@ -97,17 +103,78 @@ using namespace std;
 	    lst1.unique();                         //删除相邻重复元素
 	遍历方法：
 	//迭代器法
-	    for(list<int>::const_iterator iter = lst1.begin();iter != lst1.end();iter++)
-
+	    list<int>::const_iterator iter = lst1.begin()
+	    for(iter; iter != lst1.end(); iter++)
 	    {
 	       cout<<*iter;
 	    }
 	    cout<<endl;
 	3.deque(需要导入头文件#include <deque>)
+参考链接：https://www.cnblogs.com/linuxAndMcu/p/10260124.html
+https://www.cnblogs.com/scandy-yuan/archive/2013/01/09/2853603.html
 		deque容器类与vector类似，支持随机访问和快速插入删除，它在容器中某一位置上的操作所花费的是线性时间。
 		与vector不同的是，deque还支持从开始端插入数据：push_front()。其余类似vector操作方法的使用。
+		deque（双端队列）是由一段一段的定量连续空间构成，可以向两端发展，因此不论在尾部或头部安插元素都十分迅速。 
+		在中间部分安插元素则比较费时，因为必须移动其它元素。
+	定义初始化：
+	deque<int> a; // 定义一个int类型的双端队列a
+	deque<int> a(10); // 定义一个int类型的双端队列a，并设置初始大小为10
+	deque<int> a(10, 1); // 定义一个int类型的双端队列a，并设置初始大小为10且初始值都为1
+	deque<int> b(a); // 定义并用双端队列a初始化双端队列b
+	deque<int> b(a.begin(), a.begin()+3); // 将双端队列a中从第0个到第2个(共3个)作为双端队列b的初始值
+	使用数组来初始化：
+	int n[] = { 1, 2, 3, 4, 5 };
+	// 将数组n的前5个元素作为双端队列a的初值
+	// 说明：当然不包括arr[4]元素，末尾指针都是指结束元素的下一个元素，
+	// 这个主要是为了和deque.end()指针统一。
+	deque<int> a(n, n + 5); 
+	deque<int> a(&n[1], &n[4]); // 将n[1]、n[2]、n[3]作为双端队列a的初值
+
+	容器大小：deq.size();
+	容器最大容量：deq.max_size();
+	更改容器大小：deq.resize();
+	容器判空：deq.empty();
+	减少容器大小到满足元素所占存储空间的大小：deq.shrink_to_fit();
+
+	头部添加元素：deq.push_front(const T& x);
+	末尾添加元素：deq.push_back(const T& x);
+	任意位置插入一个元素：deq.insert(iterator it, const T& x);
+	任意位置插入 n 个相同元素：deq.insert(iterator it, int n, const T& x);
+	插入另一个向量的 [forst,last] 间的数据：deq.insert(iterator it, iterator first, iterator last);
+
+	头部删除元素：deq.pop_front();
+	末尾删除元素：deq.pop_back();
+	任意位置删除一个元素：deq.erase(iterator it);
+	删除 [first,last] 之间的元素：deq.erase(iterator first, iterator last);
+	清空所有元素：deq.clear();
+
+	下标访问：deq[1]; // 并不会检查是否越界
+	at 方法访问：deq.at(1); // 以上两者的区别就是 at 会检查是否越界，是则抛出 out of range 异常
+	访问第一个元素：deq.front();
+	访问最后一个元素：deq.back();
+
+	多个元素赋值：deq.assign(int nSize, const T& x); // 类似于初始化时用数组进行赋值
+	交换两个同类型容器的元素：swap(deque&);
+
+	遍历：
+	deque<int>::iterator it;
+	for (it = deq.begin(); it != deq.end(); it++)
+	    cout << *it << endl;
+	// 或者
+	for (int i = 0; i < deq.size(); i++) {
+	    cout << deq.at(i) << endl;
+	}
+
+	可以看到，deque 与 vector 的用法基本一致，除了以下几处不同：
+
+	deque 没有 capacity() 函数，而 vector 有；
+	deque 有 push_front() 和 pop_front() 函数，而 vector 没有；
+	deque 没有 data() 函数，而 vector 有。
 
 	4.map(需要导入头文件#include <map>)
+参考链接：https://www.cnblogs.com/fnlingnzb-learner/p/5833051.html
+https://blog.csdn.net/shuzfan/article/details/53115922
+
 		C++中map容器提供一个键值对（key/value）容器，map与multimap差别仅仅在于multiple允许一个键对应多个值。
 		对于迭代器来说，可以修改实值，而不能修改key。Map会根据key自动排序。
 		map 是键－值对的集合。map 类型通常可理解为关联数组：可使用键作为下标来获取一个值，正如内置数组类型一样。
@@ -121,6 +188,10 @@ using namespace std;
 		所用的比较函数必须在键类型上定义严格弱排序（strict weak ordering）：可理解为键类型数据上的“小于”关系，虽然实际上可以选择将比较函数设计得更复杂。
 		对于键类型，唯一的约束就是必须支持 < 操作符，至于是否支持其他的关系或相等运算，则不作要求。
 		容器类自动申请和释放内存，因此无需new和delete操作。
+		map<int, string> ID_Name = {
+                { 2015, "Jim" },
+                { 2016, "Tom" },
+                { 2017, "Bob" } }
 	操作方法：
 		添加元素有两种方法：1、先用下标操作符获取元素，然后给获取的元素赋值 2、使用insert成员函数实现
 		下标操作添加元素：如果该键已在容器中，则 map 的下标运算与 vector 的下标运算行为相同：返回该键所关联的值。
@@ -269,7 +340,7 @@ void TestForVector()
 	// 显示 vec 扩展后的大小
 	cout << "extended vector size = " << vec.size() << endl;
 
-	// 访问向量中的 5 个值
+	// 访问向量中的 5 个值 索引访问元素
 	for (i = 0; i < 5; i++) {
 		cout << "value of vec [" << i << "] = " << vec[i] << endl;
 	}
@@ -279,6 +350,12 @@ void TestForVector()
 	while (v != vec.end()) {
 		cout << "value of v = " << *v << endl;
 		v++;
+	}
+	// for访问vector 使用迭代器
+	vector<int>::iterator it;
+	for (it=vec.begin(); it!=vec.end(); it++)
+	{
+		cout<<*it<<endl;
 	}
 }
 
