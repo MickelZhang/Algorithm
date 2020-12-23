@@ -15,6 +15,7 @@
 //----------------------------------------------------------------*/
 #include <iostream>
 #include <ctime>
+#include <windows.h>　
 #include "pointer.h"
 using namespace std;
 /*
@@ -457,21 +458,56 @@ void TestForSetValues()
 	//}
 }
 
-// TODO(1223256867@qq.com)
-// TODO(MickelZhang)
-// TODO(抽时间完善)
 /*
 日期和时间：关于这一栏，暂时不用学习，后面学习下怎样检测程序运行时间的代码
-*/
 
-// TODO(1223256867@qq.com)
-// TODO(MickelZhang)
-// TODO(抽时间完善)
+*/
+/*-----------------------------------------------------------------
+// 输入：
+// 输出：
+// 功能描述：程序运行时间测试
+// 作者：MickelZhang
+// 日期：2020/12/23
+// 修改人：
+// 记录：参考链接：https://www.cnblogs.com/didiaodidiao/p/9194702.html
+//                https://zhuanlan.zhihu.com/p/54665895
+//                https://www.cnblogs.com/jerry-fuyi/p/12723287.html
+//                https://blog.csdn.net/luoweifu/article/details/51470998  vs2015程序效率分析相关
+// 修改人：
+// 记录：
+// 版本：
+-----------------------------------------------------------------*/
+void TestForTime()
+{
+clock_t start = clock();
+	// codes
+clock_t end = clock();
+double elapsed_secs = static_cast<double>(end - start) / (CLOCKS_PER_SEC);
+cout <<elapsed_secs <<"s"<<endl;
+}
+
+void TestForTime2()
+{
+    LARGE_INTEGER t1,t2,tc;
+    QueryPerformanceFrequency(&tc);
+    QueryPerformanceCounter(&t1);
+    //codes
+    QueryPerformanceCounter(&t2);
+    time=(double)(t2.QuadPart-t1.QuadPart)/(double)tc.QuadPart; 
+    cout<<"time = "<<time<<endl;  //输出时间（单位：ｓ）
+}
 /*
 输入和输出：
 C++ 的 I/O 发生在流中，流是字节序列。
 如果字节流是从设备（如键盘、磁盘驱动器、网络连接等）流向内存，这叫做输入操作。
 如果字节流是从内存流向设备（如显示屏、打印机、磁盘驱动器、网络连接等），这叫做输出操作。
 cerr和clog 通过一个具体的例子进行学习
-
+关于日志：学会使用日志框架 log4cplus,log4cpp,spdlog,G3log,Pantheios.....
+参考链接：https://www.cnblogs.com/junqiang-217/p/4347432.html
+         https://thinkerou.com/post/easyloggingpp/
+	 https://gitbook.cn/gitchat/column/5b2c5b29072e851cae4299f3/topic/5b2c633e072e851cae42a1aa
+	 
+log4cplus配置:  https://blog.csdn.net/xiake001/article/details/79899115
+https://www.codetd.com/article/2759894
+https://blog.csdn.net/shaozhenged/article/details/51866186
 */
