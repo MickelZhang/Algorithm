@@ -5,7 +5,7 @@
 // 文件功能描述：
 // 创建者：MickelZhang
 // 时间：2020/12/11
-// 修改人：MickelZhang, SeventeenChen
+// 修改人：MickelZhang
 // 时间：2020/12/14
 // 修改说明：添加基本数据类型相关的代码，测试static
 // 修改人：MickelZhang
@@ -14,7 +14,7 @@
 // 修改人：MickelZhang
 // 时间：2020/12/17
 // 修改说明：实现对相关cpp文件的调用
-// 修改人：MickelZhang
+// 修改人：MickelZhang, SeventeenChen
 // 时间：2020/12/22
 // 修改说明：文件功能描述：测试相关代码，C++中的常量定义
 // 软件版本：VS2015
