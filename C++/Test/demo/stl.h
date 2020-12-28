@@ -13,6 +13,7 @@
 #ifndef STL_H
 #define  STL_H
 
+// vector≤‚ ‘
 void TestForVector();
 
 #endif

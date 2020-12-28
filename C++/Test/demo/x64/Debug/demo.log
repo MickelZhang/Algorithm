@@ -1,4 +1,77 @@
-﻿  about_exception.cpp
+﻿  about_class.cpp
+  stl.cpp
+c:\users\86185\desktop\github\algorithm\c++\test\demo\stl.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  standard_library.cpp
+  pointer.cpp
+c:\users\86185\desktop\github\algorithm\c++\test\demo\pointer.cpp(18): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+c:\users\86185\desktop\github\algorithm\c++\test\demo\pointer.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\86185\desktop\github\algorithm\c++\test\demo\pointer.cpp(343): warning C4244: “=”: 从“time_t”转换到“unsigned long”，可能丢失数据
+  operator.cpp
+c:\users\86185\desktop\github\algorithm\c++\test\demo\operator.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  main.cpp
+c:\users\86185\desktop\github\algorithm\c++\test\demo\main.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\86185\desktop\github\algorithm\c++\test\demo\base_data_type.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\86185\desktop\github\algorithm\c++\test\demo\function.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\86185\desktop\github\algorithm\c++\test\demo\data_type.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\86185\desktop\github\algorithm\c++\test\demo\operator.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\86185\desktop\github\algorithm\c++\test\demo\pointer.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
 c:\users\86185\desktop\github\algorithm\c++\test\demo\about_exception.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\86185\desktop\github\algorithm\c++\test\demo\about_template.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  function.cpp
+c:\users\86185\desktop\github\algorithm\c++\test\demo\function.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  example.cpp
+c:\users\86185\desktop\github\algorithm\c++\test\demo\example.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  data_type.cpp
+c:\users\86185\desktop\github\algorithm\c++\test\demo\data_type.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+c:\users\86185\desktop\github\algorithm\c++\test\demo\data_type.cpp(296): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: 参见“strcpy”的声明
+c:\users\86185\desktop\github\algorithm\c++\test\demo\data_type.cpp(297): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: 参见“strcpy”的声明
+c:\users\86185\desktop\github\algorithm\c++\test\demo\data_type.cpp(298): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: 参见“strcpy”的声明
+c:\users\86185\desktop\github\algorithm\c++\test\demo\data_type.cpp(302): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: 参见“strcpy”的声明
+c:\users\86185\desktop\github\algorithm\c++\test\demo\data_type.cpp(303): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: 参见“strcpy”的声明
+c:\users\86185\desktop\github\algorithm\c++\test\demo\data_type.cpp(304): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: 参见“strcpy”的声明
+c:\users\86185\desktop\github\algorithm\c++\test\demo\data_type.cpp(355): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: 参见“strcpy”的声明
+c:\users\86185\desktop\github\algorithm\c++\test\demo\data_type.cpp(356): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: 参见“strcpy”的声明
+c:\users\86185\desktop\github\algorithm\c++\test\demo\data_type.cpp(357): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: 参见“strcpy”的声明
+c:\users\86185\desktop\github\algorithm\c++\test\demo\data_type.cpp(361): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: 参见“strcpy”的声明
+c:\users\86185\desktop\github\algorithm\c++\test\demo\data_type.cpp(362): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: 参见“strcpy”的声明
+c:\users\86185\desktop\github\algorithm\c++\test\demo\data_type.cpp(363): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: 参见“strcpy”的声明
+c:\users\86185\desktop\github\algorithm\c++\test\demo\data_type.cpp(403): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: 参见“strcpy”的声明
+c:\users\86185\desktop\github\algorithm\c++\test\demo\data_type.cpp(404): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: 参见“strcpy”的声明
+c:\users\86185\desktop\github\algorithm\c++\test\demo\data_type.cpp(405): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: 参见“strcpy”的声明
+c:\users\86185\desktop\github\algorithm\c++\test\demo\data_type.cpp(409): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: 参见“strcpy”的声明
+c:\users\86185\desktop\github\algorithm\c++\test\demo\data_type.cpp(410): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: 参见“strcpy”的声明
+c:\users\86185\desktop\github\algorithm\c++\test\demo\data_type.cpp(411): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  c:\program files (x86)\windows kits\10\include\10.0.10240.0\ucrt\string.h(119): note: 参见“strcpy”的声明
+  base_data_type.cpp
+c:\users\86185\desktop\github\algorithm\c++\test\demo\base_data_type.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  about_template.cpp
+c:\users\86185\desktop\github\algorithm\c++\test\demo\about_template.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  about_exception.cpp
+c:\users\86185\desktop\github\algorithm\c++\test\demo\about_exception.h : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  about_class4.cpp
+c:\users\86185\desktop\github\algorithm\c++\test\demo\about_class4.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  about_class3.cpp
+c:\users\86185\desktop\github\algorithm\c++\test\demo\about_class3.cpp : warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+  about_class2.cpp
+  正在生成代码...
+c:\users\86185\desktop\github\algorithm\c++\test\demo\about_template.cpp(255): warning C4715: “TestForTemplateClass”: 不是所有的控件路径都返回值
+c:\users\86185\desktop\github\algorithm\c++\test\demo\example.cpp(183): warning C4715: “GetMaxNumberOfFactor2”: 不是所有的控件路径都返回值
   demo.vcxproj -> C:\Users\86185\Desktop\github\Algorithm\C++\Test\x64\Debug\demo.exe
   demo.vcxproj -> C:\Users\86185\Desktop\github\Algorithm\C++\Test\x64\Debug\demo.pdb (Full PDB)

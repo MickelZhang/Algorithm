@@ -13,7 +13,9 @@
 #ifndef ABOUT_CLASS3_H
 #define  ABOUT_CLASS3_H
 
+//多态测试
 void TestForShapePolymorphism();
+//数据抽象
 void TestForDataAbstract();
 
 #endif

@@ -14,8 +14,11 @@
 #ifndef FUNCTION_H
 #define  FUNCTION_H
 
+//函数传值
 void SwapOfValue(int x, int y);
+//函数传指针
 void SwapOfPointer(int *x, int *y);
+//函数传引用
 void SwapOfQuote(int &x, int &y);
 
 #endif

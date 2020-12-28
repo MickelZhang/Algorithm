@@ -13,10 +13,15 @@
 #ifndef ABOUT_CLASS_H
 #define  ABOUT_CLASS_H
 
+//类测试
 void TestForBoxClass();
+//构造和析构函数
 void TestForLineClass();
+//拷贝构造函数
 void TestForLine2Class();
+//this指针
 void TestForThePointerOfThis();
+//指向类的指针
 void TestForPointerOfPointClass();
 void TestForBox4();
 void TestForBox5();

@@ -12,10 +12,13 @@
 //----------------------------------------------------------------*/
 #ifndef ABOUT_CLASS2_H
 #define  ABOUT_CLASS2_H
-
+//类的继承
 void TestForShape();
+//继承多个
 void TestForMultipleInheritance();
+//函数重载
 void TestForFunctionOverload();
+//操作数重载
 void TestForOperatorOverload();
 
 #endif

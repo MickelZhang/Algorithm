@@ -14,6 +14,7 @@
 #ifndef OPERATOR_H
 #define  OPERATOR_H
 
+//自增测试
 void TestForSelfIncrease();
 
 #endif

@@ -13,8 +13,11 @@
 #ifndef ABOUT_EXCEPTION_H
 #define  ABOUT_EXCEPTION_H
 
+//除数为0测试
 void TestForDivision();
+//异常处理
 void TestForExceptionOfDivision();
+//属于自己的异常类
 void TestForMyException();
 
 #endif

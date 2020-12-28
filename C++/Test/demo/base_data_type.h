@@ -25,6 +25,7 @@ void BaseDataType();
 #ifndef BASE_DATA_TYPE_H
 #define  BASE_DATA_TYPE_H
 
+//基础数据类型
 void BaseDataType();
 
 #endif

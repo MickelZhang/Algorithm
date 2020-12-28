@@ -13,6 +13,7 @@
 #ifndef ABOUT_CLASS4_H
 #define  ABOUT_CLASS4_H
 
+//Ω”ø⁄¿‡≤‚ ‘
 void TestForInterFace();
 
 #endif

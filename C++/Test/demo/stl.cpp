@@ -30,50 +30,53 @@ using namespace std;
 			适配器是容器的接口，它本身不能直接保存元素，它保存元素的机制是调用另一种顺序容器去实现，
 			即可以把适配器看作“它保存一个容器，这个容器再保存所有元素”。
 			STL 中包含三种适配器：栈stack 、队列queue 和优先级队列priority_queue 。
-	 1、vector(需要导入头文件#include <vector>)
-	    定义和初始化：
-		    如果没有指定元素的初始化式，那么标准库将自行提供一个元素初始值进行，具体值为何，取决于存储在vector 中元素的数据类型；
-		    如果为int型数据，那么标准库将用 0 值创建元素初始化式；如果 vector 保存的是含有构造函数的类类型（如 string）的元素，
-		    标准库将用该类型的默认构造函数创建元素初始化式；元素类型可能是没有定义任何构造函数的类类型。
-		    这种情况下，标准库仍产生一个带初始值的对象，这个对象的每个成员进行了值初始化。
-		    vector<int> vec1;    //默认初始化，vec1为空
-		 vector<int> vec2(vec1);  //使用vec1初始化vec2
-		 vector<int> vec3(vec1.begin(),vec1.end());//使用vec1初始化vec2
-		 vector<int> vec4(10);    //10个值为0的元素
-		 vector<int> vec5(10,4);  //10个值为4的元素
-		 vector<string> vec6(10,"null");    //10个值为null的元素
-		 vector<string> vec7(10,"hello");  //10个值为hello的元素
-		 vector<vector<Point2f> > points; //定义一个二维数组
-		 points[0].size();  //指第一行的列数
-	操作方法：
-		    vec1.push_back(100);            //添加元素
-		    int size = vec1.size();         //元素个数
-		    bool isEmpty = vec1.empty();    //判断是否为空
-		    cout<<vec1[0]<<endl;        //取得第一个元素
-		    vec1.insert(vec1.end(),5,3);    //从vec1.back位置插入5个值为3的元素
-		    vec1.pop_back();              //删除末尾元素
-		    vec1.erase(vec1.begin(),vec1.end());//删除之间的元素，其他元素前移
-		    cout<<(vec1==vec2)?true:false;  //判断是否相等==、！=、>=、<=...
-		    vector<int>::iterator iter = vec1.begin();    //获取迭代器首地址
-		    vector<int>::const_iterator c_iter = vec1.begin();   //获取const类型迭代器
-		    vec1.clear();                 //清空元素
-	遍历容器：
+			1、vector(需要导入头文件#include <vector>)
+			定义和初始化：
+			如果没有指定元素的初始化式，那么标准库将自行提供一个元素初始值进行，具体值为何，取决于存储在vector 中元素的数据类型；
+			如果为int型数据，那么标准库将用 0 值创建元素初始化式；如果 vector 保存的是含有构造函数的类类型（如 string）的元素，
+			标准库将用该类型的默认构造函数创建元素初始化式；元素类型可能是没有定义任何构造函数的类类型。
+			这种情况下，标准库仍产生一个带初始值的对象，这个对象的每个成员进行了值初始化。
+			vector<int> vec1;    //默认初始化，vec1为空
+			vector<int> vec2(vec1);  //使用vec1初始化vec2
+			vector<int> vec3(vec1.begin(), vec1.end());//使用vec1初始化vec2
+			vector<int> vec4(10);    //10个值为0的元素
+			vector<int> vec5(10, 4);  //10个值为4的元素
+			vector<string> vec6(10, "null");    //10个值为null的元素
+			vector<string> vec7(10, "hello");  //10个值为hello的元素
+			vector<vector<Point2f> > points; //定义一个二维数组
+			points[0].size();  //指第一行的列数
+			操作方法：
+			vec1.push_back(100);            //添加元素
+			int size = vec1.size();         //元素个数
+			bool isEmpty = vec1.empty();    //判断是否为空
+			cout << vec1[0] << endl;        //取得第一个元素
+			vec1.insert(vec1.end(), 5, 3);    //从vec1.back位置插入5个值为3的元素
+			vec1.pop_back();              //删除末尾元素
+			vec1.erase(vec1.begin(), vec1.end());//删除之间的元素，其他元素前移
+			cout << (vec1 == vec2) ? true : false;  //判断是否相等==、！=、>=、<=...
+			vector<int>::iterator iter = vec1.begin();    //获取迭代器首地址
+			vector<int>::const_iterator c_iter = vec1.begin();   //获取const类型迭代器
+			vec1.clear();                 //清空元素
+			遍历容器：
 			//下标法(vector的特有访问方法，一般容器只能通过迭代器访问)
-		     int  length = vec1.size();
-		     for ( int  i=0;i<length;i++)
-		    {
-		       cout<<vec1[i];
-		    }
-		    cout<<endl<<endl;
-		     // 迭代器法
-		    vector< int >::const_iterator iterator = vec1.begin();
-		     for (;iterator != vec1.end();iterator++)
-		    {
-		       cout<<*iterator；
-		    }
-		    
-		当vector作为函数参数或者返回值的时候：double Distance(vector<int>&a);  要有&运算符
-		vector 相关算法：#include<algorithm> 中将元素翻转reverse,排序sort
+			int  length = vec1.size();
+			for (int i = 0; i<length; i++)
+			{
+			cout << vec1[i];
+			}
+			cout << endl << endl;
+			// 迭代器法
+			vector< int >::const_iterator iterator = vec1.begin();
+			for (; iterator != vec1.end(); iterator++)
+			{
+			cout << *iterator；
+			}
+
+			当vector作为函数参数或者返回值的时候：double Distance(vector<int>&a);  要有&运算符
+			vector 相关算法：#include<algorithm> 中将元素翻转reverse, 排序sort
+
+			它与数组十分相似，唯一不同的是，向量在需要扩展大小的时候，
+			会自动处理它自己的存储需求
 	2.list(需要导入头文件#include <list>)
 参考链接：https://www.geeksforgeeks.org/list-cpp-stl/
 	 https://blog.csdn.net/lskyne/article/details/10418823
@@ -304,12 +307,7 @@ https://blog.csdn.net/shuzfan/article/details/53115922
 	 https://blog.csdn.net/zhanh1218/article/details/33340959
 	 https://www.cnblogs.com/yc_sunniwell/archive/2010/06/25/1764934.html
 	 https://blog.csdn.net/liyuan_669/article/details/22100165
-
-
 */
-
-//它与数组十分相似，唯一不同的是，向量在需要扩展大小的时候，
-//会自动处理它自己的存储需求
 
 /*-----------------------------------------------------------------
 // 输入：

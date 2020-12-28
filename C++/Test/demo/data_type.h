@@ -14,19 +14,31 @@
 #ifndef DATA_TYPE_H
 #define  DATA_TYPE_H
 
+//随机数
 void RandomNumber();
+//数组测试
 void TestForArray();
+//数组的指针
 void ThePointerOfArray();
+//求均值
 double GetAverage(int arr[], int size);
+//结构体
 int* GetRandom();
 void TestForStruct();
+//结构体
 void printBook(struct Books book);
+//结构体作为函数参数
 void TestForStructOfFunction();
 void printBook2(struct Books *book);
+//结构体指针作为参数
 void TestForStructPointer();
+//动态内存分配测试
 void TestForMemory();
+//二维数组动态内存分配
 void TestForTwoDimensionalArray();
+//三维数组动态内存分配
 void TestForThreeDimensionalArray();
+//对象的内存分配
 void TestForMemoryOfObject();
 
 #endif

@@ -373,7 +373,7 @@ void TestForStructOfFunction()
 
 
 
-// 该函数以结构指针作为参数
+// 该函数以结构体指针作为参数
 void printBook2(struct Books *book)
 {
 	cout << "书标题  : " << book->title << endl;
