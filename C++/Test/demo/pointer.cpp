@@ -351,7 +351,7 @@ void TestForGetSeconds(unsigned long *par)
 // 功能描述：传递指针给函数
 // 作者：MickelZhang
 // 日期：2020/12/16
-// 修改人：
+// 修改人：Seventeen
 // 记录：
 // 修改人：
 // 记录：
@@ -389,6 +389,8 @@ double GetAverage(int *arr, int size)
 	不存在空引用。引用必须连接到一块合法的内存。
 	一旦引用被初始化为一个对象，就不能被指向到另一个对象。指针可以在任何时候指向到另一个对象。
 	引用必须在创建时被初始化。指针可以在任何时间被初始化。
+	参考链接：https://blog.csdn.net/weikangc/article/details/49762929 // modified by Seventeen
+	
 创建引用：
 	int i = 17;
 	int& r = i; //"r 是一个初始化为 i 的整型引用"
