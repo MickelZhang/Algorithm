@@ -236,7 +236,7 @@ void Line::setLength(double len) //也可在类的内部进行函数的定义，
 // 功能描述：测试Line类,构造函数和析构函数
 // 作者：MickelZhang
 // 日期：2020/12/18
-// 修改人：
+// 修改人：Seventeen
 // 记录：
 // 修改人：
 // 记录：
@@ -247,7 +247,7 @@ void TestForLineClass()
    Line line;
    // 设置长度
    line.setLength(6.0); 
-   cout << "Length of line : " << line.getLength() <<endl;
+   cout << "Length of line : " << line.getLength() <<endl;   // Seventeen：这里没有调用析构函数，为何菜鸟上面可以打印析构函数调用后的delete那句？默认会先执行构造，最后执行析构吗？
 }
 
 /*-----------------------------------------------------------------
